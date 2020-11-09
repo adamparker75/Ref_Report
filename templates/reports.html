@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ref Report</title>
+</head>
+<body>
+    {% for report in reports %}
+        {{ report.match_type }}<br>
+        {{ report.referee_name }}<br>
+        {{ report.report_date }}<br>
+        {{ report.report_fixture }}<br>
+        {{ report.report_score }}<br>
+        {{ report.report_scorers }}<br>
+        {{ report.report_cautions }}<br>
+        {{ report.report_dismissals }}<br>
+        {{ report.report_report }}
+    {% endfor %}
+</body>
+</html>
