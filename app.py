@@ -31,8 +31,28 @@ def get_reports():
     return render_template("reports.html", reports=reports)
 
 
+# Register route
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    if request.method == "POST":
+        user_exists = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if user_exists:
+            flash("That username is taken, please choose another one.")
+            return redirect(url_for("register"))
+
+        register = {
+            "firstname": request.form.get("firstname").lower(),
+            "lastname": request.form.get("lastname").lower(),
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(register)
+
+        session["user"] = request.form.get("username").lower()
+        flash("You have successfully registered!")
+        return redirect(url_for("get_reports", username=session["user"]))
     return render_template("register.html")
 
 
