@@ -6,7 +6,7 @@ body {
 
 /* Sets the root element font size */
  html {
-     font-size: 20px;
+     font-size: 18px;
 }
 
 nav .brand-logo {
@@ -15,4 +15,9 @@ nav .brand-logo {
 
 .referee-image {
     border-radius: 1.5rem;
+}
+
+.flash-messages  {
+    line-height: 2;
+    color: white;
 }
