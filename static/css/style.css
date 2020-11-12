@@ -2,7 +2,7 @@
 
 body {
     font-family: "Alegreya", sans-serif;
-}
+    }
 
 /* Sets the root element font size */
  html {
@@ -11,4 +11,8 @@ body {
 
 nav .brand-logo {
     font-size: 1.8rem;
+}
+
+.referee-image {
+    border-radius: 1.5rem;
 }
