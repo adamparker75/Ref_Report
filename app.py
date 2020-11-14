@@ -52,7 +52,7 @@ def register():
 
         session["user"] = request.form.get("username").lower()
         flash("You have successfully registered!")
-        return redirect(url_for("get_reports", username=session["user"]))
+        return redirect(url_for("register", username=session["user"]))
     return render_template("register.html")
 
 
