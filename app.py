@@ -91,6 +91,11 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/submit_report")
+def submit_report():
+    return render_template("/submit_report.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
