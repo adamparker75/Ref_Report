@@ -93,7 +93,8 @@ def logout():
 
 @app.route("/submit_report")
 def submit_report():
-    return render_template("/submit_report.html")
+    match = mongo.db.match.find().sort("match_type", 1)
+    return render_template("/submit_report.html", match=match)
 
 
 if __name__ == "__main__":
