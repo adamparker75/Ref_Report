@@ -27,7 +27,7 @@ def index():
 # Reports route
 @app.route("/get_reports")
 def get_reports():
-    reports = mongo.db.reports.find()
+    reports = list(mongo.db.reports.find())
     return render_template("reports.html", reports=reports)
 
 

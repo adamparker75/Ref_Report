@@ -10,12 +10,10 @@
     </div>
 
 </section>
-  <div class="row">
-    <div class="col s12 m6">
-      <div class="card indigo darken-4">
-        <div class="card-content white-text ">
-          <span class="card-title">Card Title</span>
-            {% for report in reports %}
+
+       
+
+           <!-- {% for report in reports %}
         {{ report.match_type }}<br>
         {{ report.referee_name }}<br>
         {{ report.report_date }}<br>
@@ -25,15 +23,27 @@
         {{ report.report_cautions }}<br>
         {{ report.report_dismissals }}<br>
         {{ report.report_report }}<br>
-    {% endfor %}
-        </div>
-        <div class="card-action center">
-          <a href="#">Edit</a>
-          <a href="#">Delete</a>
-        </div>
-      </div>
-    </div>
-  </div>
+    {% endfor %} -->
+<ul class="collapsible popout">
+	{% for report in reports %}
+	<li>
+		<div class="collapsible-header white-text deep-purple darken-1">
+			<i class="fas fa-arrow-circle-down"></i>
+			<strong>{{ report.report_fixture }}<br>
+                {{ report.report_date }}</strong>
+		</div>
+		<div class="collapsible-body">
+		Match Type: {{ report.match_type }}<br>
+		Referee Name: {{ report.referee_name }}<br>
+		Score: {{ report.report_score }}<br>
+		Goalscorers: {{ report.report_scorers }}<br>
+		Cautions: {{ report.report_cautions }}<br>
+		Dismissals: {{ report.report_dismissals }}<br>
+		<p>   Match Report: {{ report.report_report }}</p><br>
+		</div>
+	</li>
+	{% endfor %}
+</ul>
  
 
 {% endblock %}
