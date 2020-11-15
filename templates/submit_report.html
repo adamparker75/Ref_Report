@@ -2,7 +2,7 @@
 {% block content %}
 <section class="container">
 
-	<h4 class="center-align deep-purple-text text-darken-1">Submit a Report</h4>
+	<h5 class="center-align deep-purple-text text-darken-1">Submit a Report</h5>
 
 	<div class="col s12">
 		<p>
@@ -30,7 +30,7 @@
 			<div class="input-field col s6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
                     <select id="match_type" name="match_type" class="validate" required>
-                    <option value="" disabled selected>Choose Match Type</option>
+                    <option value="" disabled selected></option>
                     {% for match in match %}
                     <option value="{{ match.match_type }}">{{ match.match_type }}</option>
                     {% endfor %}
