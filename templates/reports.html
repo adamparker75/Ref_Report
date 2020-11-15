@@ -3,11 +3,12 @@
 
 <section class="container">
 
-	<div class="col s12">
-        <p>
-		<img src="{{ url_for('static', filename='images/referee-players.jpg') }}" class="responsive-img referee-image" alt="">
-        </p>
-    </div>
+    <h3 class="center-align deep-purple-text darken-1">My Reports</h3>
+    	<div class="col s12">
+             <p>
+		    <img src="{{ url_for('static', filename='images/referee-players.jpg') }}" class="responsive-img referee-image" alt="">
+            </p>
+        </div>
 
 </section>
 
@@ -33,17 +34,16 @@
                 {{ report.report_date }}</strong>
 		</div>
 		<div class="collapsible-body">
-		Match Type: {{ report.match_type }}<br>
-		Referee Name: {{ report.referee_name }}<br>
-		Score: {{ report.report_score }}<br>
-		Goalscorers: {{ report.report_scorers }}<br>
-		Cautions: {{ report.report_cautions }}<br>
-		Dismissals: {{ report.report_dismissals }}<br>
-		<p>   Match Report: {{ report.report_report }}</p><br>
+		    Match Type: {{ report.match_type }}<br>
+		    Referee Name: {{ report.referee_name }}<br>
+            Score: {{ report.report_score }}<br>
+            Goalscorers: {{ report.report_scorers }}<br>
+            Cautions: {{ report.report_cautions }}<br>
+            Dismissals: {{ report.report_dismissals }}<br>
+			<p> Match Report: {{ report.report_report }}</p><br>
 		</div>
 	</li>
 	{% endfor %}
 </ul>
- 
 
 {% endblock %}
