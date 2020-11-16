@@ -18,20 +18,20 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-# Homepage route
+# Homepage function
 @app.route("/")
 def index():
     return render_template("index.html")
 
 
-# Reports route
+# Reports function
 @app.route("/get_reports")
 def get_reports():
     reports = list(mongo.db.reports.find())
     return render_template("reports.html", reports=reports)
 
 
-# Register route
+# Register function
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -56,7 +56,7 @@ def register():
     return render_template("register.html")
 
 
-# Login route
+# Login function
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -83,7 +83,7 @@ def login():
     return render_template("login.html")
 
 
-# Logout route
+# Logout function
 @app.route("/logout")
 def logout():
     flash("You are now logged out")
@@ -91,8 +91,26 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/submit_report")
+# Submit report function
+@app.route("/submit_report", methods=["GET", "POST"])
 def submit_report():
+    if request.method == "POST":
+        new_report = {
+            "referee_name": request.form.get("referee_name"),
+            "report_date": request.form.get("report_date"),
+            "match_type": request.form.get("match_type"),
+            "report_fixture": request.form.get("report_fixture"),
+            "report_score": request.form.get("report_score"),
+            "report_scorers": request.form.get("report_scorers"),
+            "report_cautions": request.form.get("report_cautions"),
+            "report_dismissals": request.form.get("report_dismissals"),
+            "report_report": request.form.get("report_report"),
+            "created_by": session["user"]
+        }
+        mongo.db.reports.insert_one(new_report)
+        flash("Report successfully added!")
+        return redirect(url_for("get_reports"))
+
     match = mongo.db.match.find().sort("match_type", 1)
     return render_template("/submit_report.html", match=match)
 
