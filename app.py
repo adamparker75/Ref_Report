@@ -115,6 +115,14 @@ def submit_report():
     return render_template("/submit_report.html", match=match)
 
 
+# Edit Report function
+@app.route("/edit_report/<report_id>", methods=["GET", "POST"])
+def edit_report(report_id):
+    report = mongo.db.reports.find_one({"_id": ObjectId(report_id)})
+    match = mongo.db.match.find().sort("match_type", 1)
+    return render_template("/edit_report.html", report=report, match=match)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

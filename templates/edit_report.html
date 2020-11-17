@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="container">
+
+	<h5 class="center-align deep-purple-text text-darken-1">Edit Report</h5>
+
+	<div class="col s12">
+		<p>
+			<img src="{{ url_for('static', filename='images/referee-submit.jpg') }}" class="responsive-img referee-image" alt="">
+        </p>
+	</div>
+
+</section>
+<div class="card-panel grey lighten-4">
+	<form class="col s12" method="POST" action="{{ url_for('edit_report', report_id=report._id) }}">
+		<div class="row">
+			<div class="input-field col s12 m6">
+				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+				<input id="referee_name" name="referee_name" minlength="4" maxlength="50"
+                     type="text" class="validate" required>
+				<label for="referee_name">Ref's Name</label>
+			</div>
+			<div class="input-field col s12 m6">
+				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+				<input id="report_date" name="report_date" type="text" class="datepicker validate" required>
+				<label for="report_date">Date</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m6">
+				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+                    <select id="match_type" name="match_type" class="validate" required>
+                    <option value="" disabled selected></option>
+                    {% for match in match %}
+                    <option value="{{ match.match_type }}">{{ match.match_type }}</option>
+                    {% endfor %}
+                    </select>
+                    <label for="match_type">Match Type</label>
+			</div>
+			<div class="input-field col s12 m6">
+				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+				<input id="report_fixture" name="report_fixture" minlength="4" maxlength="50"
+				        type="text" class="validate" required>
+				<label for="report_fixture">Fixture</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m6">
+				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+				<input id="report_score" name="report_score" minlength="2" maxlength="10"
+				        type="text" class="validate" required>
+				<label for="report_score">Score</label>
+			</div>
+			<div class="input-field col s12 m6">
+				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+				<input id="report_scorers" name="report_scorers" minlength="4" maxlength="150"
+				        type="text" class="validate" required>
+				<label for="report_scorers">Goal Scorers</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12 m6">
+				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+				<input id="report_cautions" name="report_cautions" minlength="4" maxlength="150"
+				        type="text" class="validate" required>
+				<label for="report_cautions">Cautions</label>
+			</div>
+			<div class="input-field col s12 m6">
+				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+				<input id="report_dismissals" name="report_dismissals" minlength="4" maxlength="150"
+				        type="text" class="validate" required>
+				<label for="report_dismissals">Dismissals</label>
+			</div>
+		</div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+                <textarea id="report_report" name="report_report" minlength="5" maxlength="500" 
+                    class="materialize-textarea validate" required></textarea>
+                <label for="report_report">Match Report</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large deep-purple darken-1">
+                    Edit Report <i class="fas fa-edit"></i>
+                </button>
+            </div>
+        </div>
+	</form>
+</div>
+
+{% endblock %}

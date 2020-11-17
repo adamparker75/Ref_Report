@@ -30,7 +30,7 @@
             Dismissals: {{ report.report_dismissals }}<br>
 			<p> Match Report: {{ report.report_report }}</p><br>
             <div class="center-align">
-                <a href="" class="btn-small center-align deep-purple darken-1">Edit Report</a>
+                <a href="{{ url_for('edit_report', report_id=report._id) }}" class="btn-small center-align deep-purple darken-1">Edit Report</a>
                 <a href="" class="btn-small center-align red darken-3">Delete Report</a>
             </div>
             <p><em>Submitted by: {{ report.created_by }}</em></p>
