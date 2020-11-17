@@ -21,3 +21,7 @@ nav .brand-logo {
     line-height: 2;
     color: white;
 }
+
+.btn-small {
+    margin: 0.5rem;
+}
