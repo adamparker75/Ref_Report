@@ -14,20 +14,20 @@
 <div class="card-panel grey lighten-4">
 	<form class="col s12" method="POST" action="{{ url_for('submit_report') }}">
 		<div class="row">
-			<div class="input-field col s6">
+			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
 				<input id="referee_name" name="referee_name" minlength="4" maxlength="50"
                      type="text" class="validate" required>
 				<label for="referee_name">Ref's Name</label>
 			</div>
-			<div class="input-field col s6">
+			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
 				<input id="report_date" name="report_date" type="text" class="datepicker validate" required>
 				<label for="report_date">Date</label>
 			</div>
 		</div>
 		<div class="row">
-			<div class="input-field col s6">
+			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
                     <select id="match_type" name="match_type" class="validate" required>
                     <option value="" disabled selected></option>
@@ -37,7 +37,7 @@
                     </select>
                     <label for="match_type">Match Type</label>
 			</div>
-			<div class="input-field col s6">
+			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
 				<input id="report_fixture" name="report_fixture" minlength="4" maxlength="50"
 				        type="text" class="validate" required>
@@ -45,13 +45,13 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="input-field col s6">
+			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
 				<input id="report_score" name="report_score" minlength="2" maxlength="10"
 				        type="text" class="validate" required>
 				<label for="report_score">Score</label>
 			</div>
-			<div class="input-field col s6">
+			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
 				<input id="report_scorers" name="report_scorers" minlength="4" maxlength="150"
 				        type="text" class="validate" required>
@@ -59,13 +59,13 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="input-field col s6">
+			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
 				<input id="report_cautions" name="report_cautions" minlength="4" maxlength="150"
 				        type="text" class="validate" required>
 				<label for="report_cautions">Cautions</label>
 			</div>
-			<div class="input-field col s6">
+			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
 				<input id="report_dismissals" name="report_dismissals" minlength="4" maxlength="150"
 				        type="text" class="validate" required>
