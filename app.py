@@ -118,6 +118,23 @@ def submit_report():
 # Edit Report function
 @app.route("/edit_report/<report_id>", methods=["GET", "POST"])
 def edit_report(report_id):
+    if request.method == "POST":
+        update = {
+            "referee_name": request.form.get("referee_name"),
+            "report_date": request.form.get("report_date"),
+            "match_type": request.form.get("match_type"),
+            "report_fixture": request.form.get("report_fixture"),
+            "report_score": request.form.get("report_score"),
+            "report_scorers": request.form.get("report_scorers"),
+            "report_cautions": request.form.get("report_cautions"),
+            "report_dismissals": request.form.get("report_dismissals"),
+            "report_report": request.form.get("report_report"),
+            "created_by": session["user"]
+        }
+        mongo.db.reports.update({"_id": ObjectId(report_id)}, update)
+        flash("Report successfully edited!")
+        return redirect(url_for("get_reports"))
+
     report = mongo.db.reports.find_one({"_id": ObjectId(report_id)})
     match = mongo.db.match.find().sort("match_type", 1)
     return render_template("/edit_report.html", report=report, match=match)
