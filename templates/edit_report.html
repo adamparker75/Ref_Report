@@ -17,12 +17,13 @@
 			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
 				<input id="referee_name" name="referee_name" minlength="4" maxlength="50"
-                     type="text" class="validate" required>
+                value="{{ report.referee_name }}"     type="text" class="validate" required>
 				<label for="referee_name">Ref's Name</label>
 			</div>
 			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
-				<input id="report_date" name="report_date" type="text" class="datepicker validate" required>
+				<input id="report_date" name="report_date" type="text"
+                    value="{{ report.report_date }}" class="datepicker validate" required>
 				<label for="report_date">Date</label>
 			</div>
 		</div>
@@ -30,9 +31,13 @@
 			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
                     <select id="match_type" name="match_type" class="validate" required>
-                    <option value="" disabled selected></option>
+                    <option value="" disabled></option>
                     {% for match in match %}
+                        {% if match.match_type == report.match_type %}
+                            <option value="{{ match.match_type }}" selected>{{ match.match_type }}</option>
+                        {% else %}
                     <option value="{{ match.match_type }}">{{ match.match_type }}</option>
+                        {% endif %}
                     {% endfor %}
                     </select>
                     <label for="match_type">Match Type</label>
@@ -40,7 +45,7 @@
 			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
 				<input id="report_fixture" name="report_fixture" minlength="4" maxlength="50"
-				        type="text" class="validate" required>
+				    value="{{ report.report_fixture }}" type="text" class="validate" required>
 				<label for="report_fixture">Fixture</label>
 			</div>
 		</div>
@@ -48,13 +53,13 @@
 			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
 				<input id="report_score" name="report_score" minlength="2" maxlength="10"
-				        type="text" class="validate" required>
+				    value="{{ report.report_score }}" type="text" class="validate" required>
 				<label for="report_score">Score</label>
 			</div>
 			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
 				<input id="report_scorers" name="report_scorers" minlength="4" maxlength="150"
-				        type="text" class="validate" required>
+				    value="{{ report.report_scorers }}" type="text" class="validate" required>
 				<label for="report_scorers">Goal Scorers</label>
 			</div>
 		</div>
@@ -62,13 +67,13 @@
 			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
 				<input id="report_cautions" name="report_cautions" minlength="4" maxlength="150"
-				        type="text" class="validate" required>
+				    value="{{ report.report_cautions }}" type="text" class="validate" required>
 				<label for="report_cautions">Cautions</label>
 			</div>
 			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
 				<input id="report_dismissals" name="report_dismissals" minlength="4" maxlength="150"
-				        type="text" class="validate" required>
+				    value="{{ report.report_dismissals }}" type="text" class="validate" required>
 				<label for="report_dismissals">Dismissals</label>
 			</div>
 		</div>
@@ -76,14 +81,17 @@
             <div class="input-field col s12">
                 <i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
                 <textarea id="report_report" name="report_report" minlength="5" maxlength="500" 
-                    class="materialize-textarea validate" required></textarea>
+                    class="materialize-textarea validate" required>
+                    {{- report.report_report -}}
+                    </textarea>
                 <label for="report_report">Match Report</label>
             </div>
         </div>
         <div class="row">
             <div class="col s12 center-align">
-                <button type="submit" class="btn-large deep-purple darken-1">
-                    Edit Report <i class="fas fa-edit"></i>
+            <a href="{{ url_for('get_reports') }}" class="btn-large red darken-3 edit-buttons">Cancel</a>
+                <button type="submit" class="btn-large deep-purple darken-1 edit-buttons">
+                    Edit Report 
                 </button>
             </div>
         </div>
