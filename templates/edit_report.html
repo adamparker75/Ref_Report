@@ -2,15 +2,16 @@
 {% block content %}
 <section class="container">
 
-	<h5 class="center-align deep-purple-text text-darken-1">Edit Report</h5>
-
-	<div class="col s12">
-		<p>
-			<img src="{{ url_for('static', filename='images/referee-edit.jpg') }}" class="responsive-img referee-image" alt="">
-        </p>
-	</div>
+<h5 class="center-align deep-purple-text text-darken-1">Edit Report</h5>
+<!-- Main Image-->
+<div class="col s12">
+    <p>
+        <img src="{{ url_for('static', filename='images/referee-edit.jpg') }}" class="responsive-img referee-image" alt="">
+    </p>
+</div>
 
 </section>
+<!-- Form for collecting match report data-->
 <div class="card-panel grey lighten-4">
 	<form class="col s12" method="POST" action="{{ url_for('edit_report', report_id=report._id) }}">
 		<div class="row">
@@ -30,7 +31,7 @@
 		<div class="row">
 			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
-                    <select id="match_type" name="match_type" class="validate" required>
+				<select id="match_type" name="match_type" class="validate" required>
                     <option value="" disabled></option>
                     {% for match in match %}
                         {% if match.match_type == report.match_type %}
@@ -40,7 +41,7 @@
                         {% endif %}
                     {% endfor %}
                     </select>
-                    <label for="match_type">Match Type</label>
+				<label for="match_type">Match Type</label>
 			</div>
 			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
@@ -77,24 +78,25 @@
 				<label for="report_dismissals">Dismissals</label>
 			</div>
 		</div>
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
-                <textarea id="report_report" name="report_report" minlength="5" maxlength="500" 
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+				<textarea id="report_report" name="report_report" minlength="5" maxlength="500"
                     class="materialize-textarea validate" required>
                     {{- report.report_report -}}
                     </textarea>
-                <label for="report_report">Match Report</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 center-align">
-            <a href="{{ url_for('get_reports') }}" class="btn-large red darken-3 edit-buttons">Cancel</a>
-                <button type="submit" class="btn-large deep-purple darken-1 edit-buttons">
+				<label for="report_report">Match Report</label>
+			</div>
+		</div>
+		<!--Cancel and Edit Buttons-->
+		<div class="row">
+			<div class="col s12 center-align">
+				<a href="{{ url_for('get_reports') }}" class="btn-large red darken-3 edit-buttons">Cancel</a>
+				<button type="submit" class="btn-large deep-purple darken-1 edit-buttons">
                     Edit Report 
                 </button>
-            </div>
-        </div>
+			</div>
+		</div>
 	</form>
 </div>
 
