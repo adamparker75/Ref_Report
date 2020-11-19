@@ -31,6 +31,7 @@ def get_reports():
     return render_template("reports.html", reports=reports)
 
 
+# Admin Reports Function
 @app.route("/admin_reports")
 def admin_reports():
     reports = list(mongo.db.reports.find())

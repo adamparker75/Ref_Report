@@ -19,8 +19,8 @@
 		<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
 		<ul class="right hide-on-med-and-down">
 			<li><a href="{{ url_for('index') }}">Home</a></li>
-			{% if session.user|lower != "admin|lower" %}
-			<li><a href="{{ url_for('get_reports') }}">Reports</a></li>
+			{% if session.user|lower %}
+			<li><a href="{{ url_for('get_reports') }}">My Reports</a></li>
 			<li><a href="{{ url_for('submit_report') }}">Submit Report</a></li>
 			{% if session.user|lower == "admin"|lower %}
 			<li><a href="{{ url_for('admin_reports') }}">All Reports</a></li>
@@ -38,7 +38,7 @@
     <h4 class="center-align indigo-text text-darken-4">Ref Report</h4>
             <li><a href="{{ url_for('index') }}">Home</a></li>
             {% if session.user %}
-            <li><a href="{{ url_for('get_reports') }}">Reports</a></li>
+            <li><a href="{{ url_for('get_reports') }}">My Reports</a></li>
             <li><a href="{{ url_for('submit_report') }}">Submit Report</a></li>
             {% if session.user|lower == "admin"|lower %}
             <li><a href="{{ url_for('admin_reports') }}">All Reports</a></li>
