@@ -147,6 +147,13 @@ def edit_report(report_id):
     return render_template("/edit_report.html", report=report, match=match)
 
 
+@app.route("/delete_report/<report_id>")
+def delete_report(report_id):
+    mongo.db.reports.remove({"_id": ObjectId(report_id)})
+    flash("Report succesfully deleted!")
+    return redirect(url_for("get_reports"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
