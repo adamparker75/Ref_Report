@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template,
+    Flask, flash, render_template, abort,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -22,6 +22,11 @@ mongo = PyMongo(app)
 @app.errorhandler(404)
 def not_found(e):
     return render_template("error_404.html")
+
+
+@app.errorhandler(500)
+def server_error(e):
+    return render_template("error_500.html")
 
 
 # Homepage function
