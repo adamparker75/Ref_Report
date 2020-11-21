@@ -27,7 +27,7 @@
 			{% endif %}
 			<li><a href="{{ url_for('logout') }}">Logout</a></li>
 			{% else %}
-			<li><a href="{{ url_for('login') }}">Login</a></li>
+			<li><a href="{{ url_for('login') }}" data-target="modal5">Login</a></li>
 			<li><a href="{{ url_for('register') }}">Register</a></li>
 			{% endif %}
 		</ul>
@@ -50,6 +50,7 @@
             {% endif %}
     </ul>
   </header>
+ 
 <section>
 	<!-- flash messages taken from code institute mini project -->
 	{% with messages = get_flashed_messages() %}
