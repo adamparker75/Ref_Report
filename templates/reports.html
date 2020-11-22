@@ -13,6 +13,7 @@
 </section>
 
 <!-- Accordion taken from https://materializecss.com/collapsible.html-->
+{% if reports|length > 0 %}
 <ul class="collapsible popout">
 	{% for report in reports %}
 	{% if session.user|lower == report.created_by|lower %}
@@ -58,6 +59,9 @@
 	{% endif %}
 	{% endfor %}
 </ul>
+{% else %}
+<h4 class="red-text text-darken-4 center-align">No Results Found</h4>
+{% endif %}
 
 <div class="row card-panel light-blue lighten-5">
     <form action="{{ url_for('search') }}" method="post" class="col s12">
