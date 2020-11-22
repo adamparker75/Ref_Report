@@ -42,6 +42,15 @@ def get_reports():
     return render_template("reports.html", reports=reports)
 
 
+# Search Function
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    search_report = request.form.get("search_report")
+    reports = list(mongo.db.reports.find(
+        {"$text": {"$search": search_report}}))
+    return render_template("reports.html", reports=reports)
+
+
 # Admin Reports Function
 @app.route("/admin_reports")
 def admin_reports():
