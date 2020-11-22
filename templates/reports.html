@@ -64,24 +64,30 @@
 {% endif %}
 
 <div class="row card-panel light-blue lighten-5">
-    <form action="{{ url_for('search') }}" method="post" class="col s12">
-        <div class="row valign-wrapper center-align">
-            <div class="input-field col s12 m6">
-                <input type="text" name="search_report" id="search_report" class="validate " minlength="3" required>
-                <label for="search_report">
+	<form action="{{ url_for('search') }}" method="post" class="col s12">
+		<div class="row valign-wrapper center-align">
+			<div class="input-field col s12">
+				<input type="text" name="search_report" id="search_report" class="validate " minlength="3" required>
+				<label for="search_report">
                 <i class="fas fa-search left"></i>Search Reports
                 </label>
-            </div>
-            <div class="col s12 m4">
-                <a href="{{ url_for('get_reports') }} " class="red darken-3 btn search-buttons">
-                <i class="fas fa-redo-alt left"></i>Reset
-                </a>
-                <button type="submit" class="btn indigo darken-4 white-text search-buttons">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s6 m6 center-align">
+				<button type="submit" class="btn indigo darken-4 white-text">
                 <i class="fas fa-search left"></i>Search
                 </button>
-            </div>
-        </div>
-    </form>
+			</div>
+			<div class="col s6 m6 center-align">
+
+				<a href="{{ url_for('get_reports') }} " class="red darken-3 btn">
+					<i class="fas fa-redo-alt left"></i>Reset
+				</a>
+			</div>
+		</div>
+
+	</form>
 </div>
 
 {% endblock %}
