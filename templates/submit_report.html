@@ -2,7 +2,7 @@
 {% block content %}
 <section class="container">
 
-	<h5 class="center-align deep-purple-text text-darken-1">Submit a Report</h5>
+	<h5 class="center-align indigo-text text-darken-1">Submit a Report</h5>
     <!-- Main Image-->
 	<div class="col s12">
 		<p>
@@ -16,20 +16,20 @@
 	<form class="col s12" method="POST" action="{{ url_for('submit_report') }}">
 		<div class="row">
 			<div class="input-field col s12 m6">
-				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+				<i class="fas fa-futbol prefix indigo-text text-darken-1"></i>
 				<input id="referee_name" name="referee_name" minlength="4" maxlength="50"
                      type="text" class="validate" required>
 				<label for="referee_name">Ref's Name</label>
 			</div>
 			<div class="input-field col s12 m6">
-				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+				<i class="fas fa-futbol prefix indigo-text text-darken-1"></i>
 				<input id="report_date" name="report_date" type="text" class="datepicker validate" required>
 				<label for="report_date">Date</label>
 			</div>
 		</div>
 		<div class="row">
 			<div class="input-field col s12 m6">
-				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+				<i class="fas fa-futbol prefix indigo-text text-darken-1"></i>
                     <select id="match_type" name="match_type" class="validate" required>
                     <option value="" disabled selected></option>
                     {% for match in match %}
@@ -39,7 +39,7 @@
                     <label for="match_type">Match Type</label>
 			</div>
 			<div class="input-field col s12 m6">
-				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+				<i class="fas fa-futbol prefix indigo-text text-darken-1"></i>
 				<input id="report_fixture" name="report_fixture" minlength="4" maxlength="50"
 				        type="text" class="validate" required>
 				<label for="report_fixture">Fixture</label>
@@ -47,13 +47,13 @@
 		</div>
 		<div class="row">
 			<div class="input-field col s12 m6">
-				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+				<i class="fas fa-futbol prefix indigo-text text-darken-1"></i>
 				<input id="report_score" name="report_score" minlength="2" maxlength="10"
 				        type="text" class="validate" required>
 				<label for="report_score">Score</label>
 			</div>
 			<div class="input-field col s12 m6">
-				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+				<i class="fas fa-futbol prefix indigo-text text-darken-1"></i>
 				<input id="report_scorers" name="report_scorers" minlength="4" maxlength="150"
 				        type="text" class="validate" required>
 				<label for="report_scorers">Goal Scorers</label>
@@ -61,13 +61,13 @@
 		</div>
 		<div class="row">
 			<div class="input-field col s12 m6">
-				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+				<i class="fas fa-futbol prefix indigo-text text-darken-1"></i>
 				<input id="report_cautions" name="report_cautions" minlength="4" maxlength="150"
 				        type="text" class="validate" required>
 				<label for="report_cautions">Cautions</label>
 			</div>
 			<div class="input-field col s12 m6">
-				<i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+				<i class="fas fa-futbol prefix indigo-text text-darken-1"></i>
 				<input id="report_dismissals" name="report_dismissals" minlength="4" maxlength="150"
 				        type="text" class="validate" required>
 				<label for="report_dismissals">Dismissals</label>
@@ -75,7 +75,7 @@
 		</div>
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-futbol prefix deep-purple-text text-darken-1"></i>
+                <i class="fas fa-futbol prefix indigo-text text-darken-1"></i>
                 <textarea id="report_report" name="report_report" minlength="5" maxlength="500" 
                     class="materialize-textarea validate" required></textarea>
                 <label for="report_report">Match Report</label>
@@ -83,7 +83,7 @@
         </div>
         <div class="row">
             <div class="col s12 center-align">
-                <button type="submit" class="btn-large deep-purple darken-1">
+                <button type="submit" class="btn-large indigo darken-4">
                     Submit Report <i class="fas fa-pencil-alt"></i>
                 </button>
             </div>

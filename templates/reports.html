@@ -2,7 +2,7 @@
 {% block content %}
 
 <section class="container">
-	<h5 class="center-align deep-purple-text darken-1">My Reports</h5>
+	<h5 class="center-align indigo-text text-darken-1">My Reports</h5>
 	<!-- Main Image-->
 	<div class="col s12">
 		<p>
@@ -16,7 +16,7 @@
 	{% for report in reports %}
 	{% if session.user|lower == report.created_by|lower %}
 	<li>
-		<div class="collapsible-header white-text deep-purple darken-1">
+		<div class="collapsible-header white-text indigo darken-4">
 			<i class="fas fa-arrow-circle-down"></i>
 			<strong>{{ report.report_fixture }}<br>
                 {{ report.report_date }}</strong>
@@ -32,7 +32,7 @@
             <!-- Edit and Delete Buttons-->
 			<div class="center-align">
 				<a href="{{ url_for('edit_report', report_id=report._id) }}"
-					class="btn-small center-align deep-purple darken-1">Edit Report</a>
+					class="btn-small center-align indigo darken-4">Edit Report</a>
 				<button data-target="modal3" class="btn-small modal-trigger red darken-3">Delete Report</button>
 			</div>
 			<p><em>Submitted by: {{ report.created_by }}</em></p>

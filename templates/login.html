@@ -5,7 +5,7 @@
 
 <section class="container">
 
-<h5 class="center-align deep-purple-text darken-1">Log In</h5>
+<h5 class="center-align indigo-text darken-1">Log In</h5>
     <!-- Main image-->
 	<div class="col s12 l6">
         <p>
@@ -17,7 +17,7 @@
 <!-- Log in Button-->
 <div class="row">
 	<div class="col s12 center">
-		<button data-target="modal2" class="btn modal-trigger deep-purple darken-1">Log in to your Account</button>
+		<button data-target="modal2" class="btn modal-trigger indigo darken-4">Log in to your Account</button>
 	</div>
 </div>
 <!-- Modal taken from https://materializecss.com/modals.html -->
@@ -26,7 +26,7 @@
 		<form method="POST" action="{{ url_for('login') }}">
 			<div class="row">
 				<div class="input-field col s12">
-					<i class="fas fa-user-cog prefix deep-purple-text darken-1"></i>
+					<i class="fas fa-user-cog prefix indigo-text darken-1"></i>
 					<input id="username" name="username" type="text" minlength="5"
                     maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$"  class="validate" required>
 					<label for="username">Username</label>
@@ -34,7 +34,7 @@
 			</div>
             <div class="row">
 				<div class="input-field col s12">
-					<i class="fas fa-user-lock prefix deep-purple-text darken-1"></i>
+					<i class="fas fa-user-lock prefix indigo-text darken-1"></i>
 					<input id="password" name="password" type="password" minlength="5"
                     maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$"  class="validate" required>
 					<label for="password">Password</label>
@@ -42,7 +42,7 @@
 			</div>
             <!-- Login Button -->
             <div class="row">
-                <button type="submit" class="col s12 btn-large deep-purple darken-1">
+                <button type="submit" class="col s12 btn-large indigo darken-4">
                     Log In <i class="fas fa-sign-in-alt"></i>
                 </button>
             </div>
@@ -54,7 +54,7 @@
     <div class="col s12">
         <p class="center-align">
             New to Ref Report? 
-            <a href="{{ url_for('register') }}" class="deep-purple-text text-darken-2">Register Account</a>
+            <a href="{{ url_for('register') }}" class="indigo-text text-darken-1">Register Account</a>
         </p>
     </div>
 </div>
