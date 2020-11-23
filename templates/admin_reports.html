@@ -4,7 +4,7 @@
 <section class="container">
 
 	<h5 class="center-align indigo-text darken-1">All Reports</h5>
-    <!-- Main Image-->
+	<!-- Main Image-->
 	<div class="col s12">
 		<p>
 			<img src="{{ url_for('static', filename='images/referee-blue.jpg') }}" class="responsive-img referee-image" alt="">
@@ -15,7 +15,6 @@
 <!-- Accordion taken from https://materializecss.com/collapsible.html-->
 <ul class="collapsible popout">
 	{% for report in reports %}
-    {% if session.user|lower == "admin"|lower %}
 	<li>
 		<div class="collapsible-header white-text indigo darken-4">
 			<i class="fas fa-arrow-circle-down"></i>
@@ -30,7 +29,7 @@
             Cautions: {{ report.report_cautions }}<br>
             Dismissals: {{ report.report_dismissals }}<br>
 			<p> Match Report: {{ report.report_report }}</p><br>
-            <!-- Edit and Delete Buttons-->
+			<!-- Edit and Delete Buttons-->
 			<div class="center-align">
 				<a href="{{ url_for('edit_report', report_id=report._id) }}"
 					class="btn-small center-align indigo darken-4">Edit Report</a>
@@ -38,7 +37,7 @@
 			</div>
 			<p><em>Submitted by: {{ report.created_by }}</em></p>
 		</div>
-        <!-- Modal to check if the report should be deleted-->
+		<!-- Modal to check if the report should be deleted-->
 		<div id="modal3" class="modal">
 			<div class="modal-content light-blue lighten-5">
 				<div class="row">
@@ -48,7 +47,8 @@
 				</div>
 				<div class="row">
 					<div class="col s6 center-align">
-						<a href="{{ url_for('delete_report', report_id=report._id) }}" class="modal-close btn-small red darken-3">Delete </a>
+						<a href="{{ url_for('delete_report', report_id=report._id) }}"
+							class="modal-close btn-small red darken-3">Delete </a>
 					</div>
 					<div class="col s6 center-align">
 						<a href="{{ url_for('admin_reports') }}" class="btn-small indigo darken-4 ">Cancel</a>
@@ -58,15 +58,16 @@
 			</div>
 		</div>
 	</li>
-    {% endif %}
 	{% endfor %}
 </ul>
-<div class="row card-panel light-blue lighten-5">
-	<form action="{{ url_for('search') }}" method="post" class="col s12">
+
+<!-- Search section to search reports  -->
+<div class="row card-panel light-blue lighten-5 all-card-panels">
+	<form action="{{ url_for('admin_search') }}" method="post" class="col s12">
 		<div class="row valign-wrapper center-align">
 			<div class="input-field col s12">
-				<input type="text" name="search_report" id="search_report" class="validate " minlength="3" required>
-				<label for="search_report">
+				<input type="text" name="admin_search" id="admin_search" class="validate " minlength="3" required>
+				<label for="admin_search">
                 <i class="fas fa-search left"></i>Search Reports
                 </label>
 			</div>

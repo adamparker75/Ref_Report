@@ -58,6 +58,15 @@ def admin_reports():
     return render_template("admin_reports.html", reports=reports)
 
 
+# Admin search function
+@app.route("/admin_search", methods=["GET", "POST"])
+def admin_search():
+    admin_search = request.form.get("admin_search")
+    reports = list(mongo.db.reports.find(
+        {"$text": {"$search": admin_search}}))
+    return render_template("admin_reports.html", reports=reports)
+
+
 # Register function
 @app.route("/register", methods=["GET", "POST"])
 def register():
