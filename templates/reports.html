@@ -24,13 +24,13 @@
                 {{ report.report_date }}</strong>
 		</div>
 		<div class="collapsible-body light-blue lighten-5">
-			Match Type: {{ report.match_type }}<br>
-		    Referee Name: {{ report.referee_name }}<br>
-            Score: {{ report.report_score }}<br>
-            Goalscorers: {{ report.report_scorers }}<br>
-            Cautions: {{ report.report_cautions }}<br>
-            Dismissals: {{ report.report_dismissals }}<br>
-			<p> Match Report: {{ report.report_report }}</p><br>
+			<strong>Match Type:</strong> {{ report.match_type }}<br>
+		    <strong>Referee Name:</strong> {{ report.referee_name }}<br>
+            <strong>Score:</strong> {{ report.report_score }}<br>
+            <strong>Goalscorers:</strong> {{ report.report_scorers }}<br>
+            <strong>Cautions:</strong> {{ report.report_cautions }}<br>
+            <strong>Dismissals:</strong> {{ report.report_dismissals }}<br>
+			<p> <strong>Match Report:</strong> {{ report.report_report }}</p><br>
             <!-- Edit and Delete Buttons-->
 			<div class="center-align">
 				<a href="{{ url_for('edit_report', report_id=report._id) }}"
