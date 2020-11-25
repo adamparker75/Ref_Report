@@ -38,8 +38,18 @@ def index():
 # Reports function
 @app.route("/get_reports")
 def get_reports():
-    reports = list(mongo.db.reports.find())
-    return render_template("reports.html", reports=reports)
+    return get_reports_admin_or_user("reports.html")
+
+
+# Admin Reports Function
+@app.route("/admin_reports")
+def admin_reports():
+    return get_reports_admin_or_user("admin_reports.html")
+
+
+def get_reports_admin_or_user(html_template_name: str):
+    reports = mongo.db.reports.find()
+    return render_template(html_template_name, reports=reports)
 
 
 # Report search Function
@@ -59,13 +69,6 @@ def generic_search(form_name: str, html_template_name: str):
     reports = mongo.db.reports.find(
         {"$text": {"$search": form_search}})
     return render_template(html_template_name, reports=reports)
-
-
-# Admin Reports Function
-@app.route("/admin_reports")
-def admin_reports():
-    reports = list(mongo.db.reports.find())
-    return render_template("admin_reports.html", reports=reports)
 
 
 # Register function
