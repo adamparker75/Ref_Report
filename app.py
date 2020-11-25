@@ -42,28 +42,29 @@ def get_reports():
     return render_template("reports.html", reports=reports)
 
 
-# Search Function
-@app.route("/search", methods=["GET", "POST"])
-def search():
-    search_report = request.form.get("search_report")
-    reports = list(mongo.db.reports.find(
-        {"$text": {"$search": search_report}}))
-    return render_template("reports.html", reports=reports)
+# Report search Function
+@app.route("/report_search", methods=["GET", "POST"])
+def report_search():
+    return generic_search("search_report", "reports.html")
+
+
+# Admin search function
+@app.route("/admin_search", methods=["GET", "POST"])
+def admin_search():
+    return generic_search("admin_search", "admin_reports.html")
+
+
+def generic_search(form_name: str, html_template_name: str):
+    form_search = request.form.get(form_name)
+    reports = mongo.db.reports.find(
+        {"$text": {"$search": form_search}})
+    return render_template(html_template_name, reports=reports)
 
 
 # Admin Reports Function
 @app.route("/admin_reports")
 def admin_reports():
     reports = list(mongo.db.reports.find())
-    return render_template("admin_reports.html", reports=reports)
-
-
-# Admin search function
-@app.route("/admin_search", methods=["GET", "POST"])
-def admin_search():
-    admin_search = request.form.get("admin_search")
-    reports = list(mongo.db.reports.find(
-        {"$text": {"$search": admin_search}}))
     return render_template("admin_reports.html", reports=reports)
 
 
