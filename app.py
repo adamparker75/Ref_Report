@@ -79,7 +79,7 @@ def register():
             {"username": request.form.get("username").lower()})
 
         if user_exists:
-            flash("That username is taken, please choose another one.")
+            flash("That username is taken, please choose another one.", "error")
             return redirect(url_for("register"))
 
         register = {
@@ -91,7 +91,7 @@ def register():
         mongo.db.users.insert_one(register)
 
         session["user"] = request.form.get("username").lower()
-        flash("You have successfully registered!")
+        flash("You have successfully registered!", "success")
         return redirect(url_for("register", username=session["user"]))
     return render_template("register.html")
 
@@ -108,16 +108,16 @@ def login():
                     user_exists["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(
-                        request.form.get("username")))
+                        request.form.get("username")), "success")
                 return redirect(url_for(
                     "get_reports", username=session["user"]))
 
             else:
-                flash("The Username and/or Password is incorrect")
+                flash("The Username and/or Password is incorrect", "error")
                 return redirect(url_for("login"))
 
         else:
-            flash("The Username and/or Password is incorrect")
+            flash("The Username and/or Password is incorrect", "error")
             return redirect(url_for("login"))
 
     return render_template("login.html")
@@ -126,7 +126,7 @@ def login():
 # Logout function
 @app.route("/logout")
 def logout():
-    flash("You are now logged out")
+    flash("You are now logged out", "success")
     session.pop("user")
     return redirect(url_for("login"))
 
@@ -148,7 +148,7 @@ def submit_report():
             "created_by": session["user"]
         }
         mongo.db.reports.insert_one(new_report)
-        flash("Report successfully added!")
+        flash("Report successfully added!", "success")
         return redirect(url_for("get_reports"))
 
     match = mongo.db.match.find().sort("match_type", 1)
@@ -172,7 +172,7 @@ def edit_report(report_id):
             "created_by": session["user"]
         }
         mongo.db.reports.update({"_id": ObjectId(report_id)}, update)
-        flash("Report successfully edited!")
+        flash("Report successfully edited!", "success")
         return redirect(url_for("get_reports"))
 
     report = mongo.db.reports.find_one({"_id": ObjectId(report_id)})
@@ -183,7 +183,7 @@ def edit_report(report_id):
 @app.route("/delete_report/<report_id>")
 def delete_report(report_id):
     mongo.db.reports.remove({"_id": ObjectId(report_id)})
-    flash("Report succesfully deleted!")
+    flash("Report succesfully deleted!", "success")
     return redirect(url_for("get_reports"))
 
 

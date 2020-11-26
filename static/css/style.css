@@ -23,6 +23,14 @@ nav .brand-logo {
     color: white;
 }
 
+.flash-error {
+    background-color: #e53935;
+}
+
+.flash-success {
+    background-color: #1a237e;    
+}
+
 .btn-small {
     margin: 0.5rem;
 }
@@ -34,3 +42,4 @@ nav .brand-logo {
 .all-card-panels {
     border-radius: 1rem;
 }
+
