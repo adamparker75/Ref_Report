@@ -24,7 +24,7 @@ def not_found(e):
     return render_template("error_404.html")
 
 
-@app.errorhandler(500)
+@app.errorhandler(Exception)
 def server_error(e):
     return render_template("error_500.html")
 
