@@ -5,31 +5,45 @@ body {
     }
 
 /* Sets the root element font size */
+
  html {
      font-family: "Lato", sans-serif;
      font-size: 18px;
  }   
 
+/* Nav bar*/
+
 nav .brand-logo {
     font-size: 1.8rem;
 }
+
+/* All images */
 
 .referee-image {
     border-radius: 1rem;
 }
 
+/* Flash messages*/
+
 .flash-messages  {
-    line-height: 2;
+    line-height: 1;
+ }
+
+.flash-error {
+    background-color: #c62828;
+    border-radius: 1rem;
+    border: 1px solid #e0e0e0;
     color: white;
 }
 
-.flash-error {
-    background-color: #e53935;
+.flash-success {
+    background-color: #e1f5fe;
+    border: 1px solid #e0e0e0;
+    border-radius: 1rem;
+    color: #1a237e; 
 }
 
-.flash-success {
-    background-color: #1a237e;    
-}
+/* Buttons*/
 
 .btn-small {
     margin: 0.5rem;
@@ -38,6 +52,8 @@ nav .brand-logo {
 .edit-buttons {
     margin: 0.5rem;
 }
+
+/* Card panels*/
 
 .all-card-panels {
     border-radius: 1rem;

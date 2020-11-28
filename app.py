@@ -154,12 +154,13 @@ def login():
 
             else:
                 # If password is incorrect
-                flash("The Username and/or Password is incorrect", "error")
+                flash(
+                    "We didn't recognise that username or password.", "error")
                 return redirect(url_for("login"))
 
         else:
             # If username doesn't exist
-            flash("The Username and/or Password is incorrect", "error")
+            flash("We didn't recognise that username or password.", "error")
             return redirect(url_for("login"))
 
     return render_template("login.html")
@@ -218,7 +219,7 @@ def edit_report(report_id):
         }
         # Updates the report by using it's id key
         mongo.db.reports.update({"_id": ObjectId(report_id)}, update)
-        flash("Report successfully edited!", "success")
+        flash("Report successfully updated!", "success")
         return redirect(url_for("get_reports"))
     # Finds the report by using it's unique id key
     report = mongo.db.reports.find_one({"_id": ObjectId(report_id)})
