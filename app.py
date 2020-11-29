@@ -155,12 +155,12 @@ def login():
             else:
                 # If password is incorrect
                 flash(
-                    "We didn't recognise that username or password.", "error")
+                    "The username or password is incorrect.", "error")
                 return redirect(url_for("login"))
 
         else:
             # If username doesn't exist
-            flash("We didn't recognise that username or password.", "error")
+            flash("The username or password is incorrect.", "error")
             return redirect(url_for("login"))
 
     return render_template("login.html")

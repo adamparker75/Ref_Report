@@ -14,7 +14,6 @@
 
 <!-- Accordion taken from https://materializecss.com/collapsible.html-->
 
-
 <ul class="collapsible popout">
 	{% for report in reports %}
 	{% if session.user|lower == report.created_by|lower %}
