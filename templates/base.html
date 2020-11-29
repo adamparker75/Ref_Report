@@ -46,7 +46,7 @@
             <li><a href="{{ url_for('logout') }}">Logout</a></li>
             {% else %}
             <li><a href="{{ url_for('login') }}" class="modal-trigger" data-target="modal2">Login</a></li>
-            <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('register') }}" class="modal-trigger" data-target="modal1">Register</a></li>
             {% endif %}
     </ul>
     <!-- Login Modal Pop up taken from https://materializecss.com/modals.html-->
@@ -73,6 +73,49 @@
             <div class="row">
                 <button type="submit" class="col s12 btn-large indigo darken-4">
                     Log In <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </div>
+		</form>
+	</div>
+</div>
+<!-- Registration Modal -->
+<div id="modal1" class="modal">
+	<div class="modal-content light-blue lighten-5">
+		<form method="POST" action="{{ url_for('register') }}">
+        	<div class="row">
+				<div class="input-field col s12">
+					<i class="fas fa-user-plus prefix indigo-text text-darken-1"></i>
+					<input id="firstname" name="firstname" type="text" class="validate" required>
+					<label for="firstname">First Name</label>
+				</div>
+			</div>
+            <div class="row">
+				<div class="input-field col s12">
+					<i class="fas fa-user-plus prefix indigo-text text-darken-1"></i>
+					<input id="lastname" name="lastname" type="text" class="validate" required>
+					<label for="lastname">Last Name</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="fas fa-user-plus prefix indigo-text text-darken-1"></i>
+					<input id="username" name="username" type="text" minlength="5"
+                    maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$"  class="validate" required>
+					<label for="username">Username</label>
+				</div>
+			</div>
+            <div class="row">
+				<div class="input-field col s12">
+					<i class="fas fa-user-lock prefix indigo-text text-darken-1"></i>
+					<input id="password" name="password" type="password" minlength="5"
+                    maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$"  class="validate" required>
+					<label for="password">Password</label>
+				</div>
+			</div>
+            <!-- Register Button -->
+            <div class="row">
+                <button type="submit" class="col s12 btn-large indigo darken-4">
+                    Register <i class="fas fa-sign-in-alt"></i>
                 </button>
             </div>
 		</form>
