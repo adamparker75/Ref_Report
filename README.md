@@ -1,4 +1,8 @@
+<div align="center">
+
 # _**Ref Report**_
+
+</div> 
 
 
 ## _**About**_
@@ -12,4 +16,25 @@ to the dressing room. <br>
 Users are able to register a new account, login to their account where they can submit a new report, view all 
 existing reports and also edit and delete reports as necessary. <br>
 
-The deployed website can be viewd here - [Ref Report](https://adamp-ref-report.herokuapp.com/)
+The deployed website can be viewed here - [Ref Report](https://adamp-ref-report.herokuapp.com/)
+
+
+## _**UX**_ 
+
+The application was designed to be easy and straight forward to use. I created a simple homepage with a small
+amount of information about the application, and also a link for new users to register an account. <br>
+The application is easy to navigate by either using the menu links in the header, or using the side navigation bar on smaller
+devices. <br>
+I designed the application to have a consistent look to each page, the forms are the same throughout whether logging in or 
+submitting a report, and each page has a familiar feel to it.
+
+### _**Target Audience**_ 
+
+The application is aimed at but not restricted to the following users :
+
+* Young amateur referees.
+* Senior amateur referees.
+* Football coaches who wish to keep a record of their matches.
+* Football fans to keep a track of their favourite team.
+
+### _**User Stories**_
