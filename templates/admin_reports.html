@@ -30,12 +30,13 @@
             <strong>Dismissals:</strong> {{ report.report_dismissals }}<br>
 			<p> <strong>Match Report:</strong> {{ report.report_report }}</p><br>
 			<!-- Edit and Delete Buttons-->
+            {% if session.user|lower == report.created_by|lower %}
             <div class="center-align">
 				<a href="{{ url_for('edit_report', report_id=report._id) }}"
 					class="btn-small center-align indigo darken-4">Edit Report</a>
 				<button data-target="modal3" class="btn-small modal-trigger red darken-3">Delete Report</button>
 			</div>
-            
+            {% endif %}
             <p><em>Submitted by: {{ report.created_by }}</em></p>
 		</div>
 		<!-- Modal to check if the report should be deleted-->
