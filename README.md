@@ -34,7 +34,24 @@ The application is aimed at but not restricted to the following users :
 
 * Young amateur referees.
 * Senior amateur referees.
+* Referee assessors.
 * Football coaches who wish to keep a record of their matches.
 * Football fans to keep a track of their favourite team.
 
 ### _**User Stories**_
+
+As a referee, I want to register for an account, so that I can begin to submit my match reports.
+
+As a referee, I want to login to my account, so that I can view and submit reports.
+
+As a referee, I want to submit a report on a match I have just referee'd, so that I can store the details as they are fresh 
+in my mind.
+
+As a referee, I want to view my previous submitted reports, so they can help me submit the match details to the league.
+
+As a referee, I want to edit my reports, so I can change any details that may be incorrect.
+
+As a referee, I want to delete my reports, so I can only keep the reports that haven't been submitted to the league.
+
+As an administrator, I want to view all users reports, so I can moderate what has been submitted.
+
