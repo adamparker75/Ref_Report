@@ -62,43 +62,96 @@ As a football fan, I want a place to keep a record of my favourite team, so I ca
 ## _**Wireframes**_
 
 ### _**Home Page**_
-
+<br>
 <p align="center">
     <img width="600" height="400" src="static/files/ref_report_wireframe_homepage.png">
 </p>
+<br>
 
 ### _**Registration Page**_
-
+<br>
 <p align="center">
     <img width="600" height="400" src="static/files/ref_report_wireframe_register.png">
 </p>
+<br>
 
 ### _**Login Page**_
-
+<br>
 <p align="center">
     <img width="600" height="400" src="static/files/ref_report_wireframe_login.png">
 </p>
+<br>
 
 ### _**Reports Page**_
-
+<br>
 <p align="center">
     <img width="600" height="400" src="static/files/ref_report_wireframe_reports.png">
 </p>
+<br>
 
 ### _**Submit Report Page**_
-
+<br>
 <p align="center">
     <img width="600" height="400" src="static/files/ref_report_wireframe_submit.png">
 </p>
+<br>
 
 ### _**Tablet View**_
-
+<br>
 <p align="center">
   <img width="400" height="600" src="static/files/ref_report_wireframe_tablet.png">
 </p>
+<br>
 
 ### _**Smartphone View**_
-
+<br>
 <p align="center">
   <img width="260" height="600" src="static/files/ref_report_wireframe_mobile.png">
 </p>
+<br>
+
+## _**Features**_
+
+* **Navigation Bar** - The navigation bar is consistent across the site, it uses [Materialize CSS](https://materializecss.com/) to make it beahave responsively 
+on smaller devices.
+
+* **Side Navigation Bar** - When viewed on smaller devices the links in the navigation bar, appear from the left when the 
+hamburger menu is pressed.
+
+* **Modal Pop Up** - The links to the log in and registration page utilise a modal pop up when viewed on smaller devices.
+
+* **Collapsible Accordion** - The reports page utilises a collapsible from [Materialize CSS](https://materializecss.com/) when viewing the reports.
+
+* **Submit Report** - Allows users to submit a match report to the database.
+
+* **View Report** - Users can view a list of their reports and expand them to diaplay all of the details.
+
+* **Edit / Delete Buttons** - Users have the option to edit or delete any of their reports.
+
+### _**Features left to implement**_
+
+
+
+## _**Technologies Used**_
+
+[HTML](https://en.wikipedia.org/wiki/HTML5) -
+
+[CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) -
+
+[Materialize CSS](https://materializecss.com/)
+
+[Python](https://www.python.org/) -
+
+[Flask](https://flask.palletsprojects.com/en/1.1.x/) - 
+
+[Werkzeug Security](https://werkzeug.palletsprojects.com/en/1.0.x/utils/) - 
+
+[Jinja](https://jinja.palletsprojects.com/en/2.11.x/) - 
+
+[MongoDB](https://www.mongodb.com/) - 
+
+[jQuery](https://jquery.com/) - 
+
+[Google Fonts](https://fonts.google.com/) - 
+
+[Font Awesome](https://fontawesome.com/) - 
