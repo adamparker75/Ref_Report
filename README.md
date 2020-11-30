@@ -55,3 +55,50 @@ As a referee, I want to delete my reports, so I can only keep the reports that h
 
 As an administrator, I want to view all users reports, so I can moderate what has been submitted.
 
+As a football coach, I want to store match reports of the team I coach, so I can keep a track of the team throughout the season.
+
+As a football fan, I want a place to keep a record of my favourite team, so I can look back at how they have played over the season.
+
+## _**Wireframes**_
+
+### _**Home Page**_
+
+<p align="center">
+    <img width="600" height="400" src="static/files/ref_report_wireframe_homepage.png">
+</p>
+
+### _**Registration Page**_
+
+<p align="center">
+    <img width="600" height="400" src="static/files/ref_report_wireframe_register.png">
+</p>
+
+### _**Login Page**_
+
+<p align="center">
+    <img width="600" height="400" src="static/files/ref_report_wireframe_login.png">
+</p>
+
+### _**Reports Page**_
+
+<p align="center">
+    <img width="600" height="400" src="static/files/ref_report_wireframe_reports.png">
+</p>
+
+### _**Submit Report Page**_
+
+<p align="center">
+    <img width="600" height="400" src="static/files/ref_report_wireframe_submit.png">
+</p>
+
+### _**Tablet View**_
+
+<p align="center">
+  <img width="400" height="600" src="static/files/ref_report_wireframe_tablet.png">
+</p>
+
+### _**Smartphone View**_
+
+<p align="center">
+  <img width="260" height="600" src="static/files/ref_report_wireframe_mobile.png">
+</p>
