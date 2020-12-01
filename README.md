@@ -164,3 +164,6 @@ hamburger menu is pressed.
 
 [Heroku](https://www.heroku.com/) - The platform used to deploy the application.
 
+## _**Testing**_
+
+A lot of the testing was carried out using the developer tools in 
