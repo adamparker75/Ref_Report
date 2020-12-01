@@ -3,7 +3,7 @@
 <section class="container">
 
 	<h5 class="center-align indigo-text text-darken-1">Submit a Report</h5>
-    <!-- Main Image-->
+	<!-- Main Image-->
 	<div class="col s12">
 		<p>
 			<img src="{{ url_for('static', filename='images/referee-submit.jpg') }}" class="responsive-img referee-image" alt="">
@@ -30,13 +30,13 @@
 		<div class="row">
 			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix indigo-text text-darken-1"></i>
-                    <select id="match_type" name="match_type" class="validate" required>
-                    <option value="" disabled selected></option>
+				<select id="match_type" name="match_type" class="validate" required>
+                    <option value="" disabled></option>
                     {% for match in match %}
                     <option value="{{ match.match_type }}">{{ match.match_type }}</option>
                     {% endfor %}
                     </select>
-                    <label for="match_type">Match Type</label>
+				<label for="match_type">Match Type</label>
 			</div>
 			<div class="input-field col s12 m6">
 				<i class="fas fa-futbol prefix indigo-text text-darken-1"></i>
@@ -73,21 +73,21 @@
 				<label for="report_dismissals">Dismissals</label>
 			</div>
 		</div>
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-futbol prefix indigo-text text-darken-1"></i>
-                <textarea id="report_report" name="report_report" minlength="5" maxlength="500" 
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="fas fa-futbol prefix indigo-text text-darken-1"></i>
+				<textarea id="report_report" name="report_report" minlength="5" maxlength="500"
                     class="materialize-textarea validate" required></textarea>
-                <label for="report_report">Match Report</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 center-align">
-                <button type="submit" class="btn-large indigo darken-4">
+				<label for="report_report">Match Report</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12 center-align">
+				<button type="submit" class="btn-large indigo darken-4">
                     Submit Report <i class="fas fa-pencil-alt"></i>
                 </button>
-            </div>
-        </div>
+			</div>
+		</div>
 	</form>
 </div>
 
