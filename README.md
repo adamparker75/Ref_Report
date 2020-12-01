@@ -4,6 +4,10 @@
 
 </div> 
 
+<p align="center">
+    <img width="600" height="400" src="static/files/ref_report_wireframe_main_image.jpg">
+</p>
+
 
 ## _**About**_
 
@@ -134,24 +138,29 @@ hamburger menu is pressed.
 
 ## _**Technologies Used**_
 
-[HTML](https://en.wikipedia.org/wiki/HTML5) -
+[HTML](https://en.wikipedia.org/wiki/HTML5) - Provides the content and structure of the templates.
 
-[CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) -
+[CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) - Used to provide some of the styling.
 
-[Materialize CSS](https://materializecss.com/)
+[Materialize CSS](https://materializecss.com/) - Used to create a number of the html elements such as the forms, the collapsible and the pop up modal. It was also used to make the application responsive. 
 
-[Python](https://www.python.org/) -
+[Python](https://www.python.org/) - Used to code the flask application.
 
-[Flask](https://flask.palletsprojects.com/en/1.1.x/) - 
+[Flask](https://flask.palletsprojects.com/en/1.1.x/) - A micro web framework used to create the application.
 
-[Werkzeug Security](https://werkzeug.palletsprojects.com/en/1.0.x/utils/) - 
+[Werkzeug Security](https://werkzeug.palletsprojects.com/en/1.0.x/utils/) - Used for the users password security.
 
-[Jinja](https://jinja.palletsprojects.com/en/2.11.x/) - 
+[Jinja](https://jinja.palletsprojects.com/en/2.11.x/) - Used as a templating language with flask and python
 
-[MongoDB](https://www.mongodb.com/) - 
+[MongoDB](https://www.mongodb.com/) - Used to create the databases and store the users data.
 
-[jQuery](https://jquery.com/) - 
+[jQuery](https://jquery.com/) - Used with Materialize CSS to enable the collapsible accordion, and modal pop up.
 
-[Google Fonts](https://fonts.google.com/) - 
+[Google Fonts](https://fonts.google.com/) - The application utilises the Lato font.
 
-[Font Awesome](https://fontawesome.com/) - 
+[Font Awesome](https://fontawesome.com/) - Used for the icons throughout the application.
+
+[Git](www.github.com) - Used for version control, and tracking changes in the repository.
+
+[Heroku](https://www.heroku.com/) - The platform used to deploy the application.
+
