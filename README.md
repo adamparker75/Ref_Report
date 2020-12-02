@@ -63,6 +63,8 @@ As a football coach, I want to store match reports of the team I coach, so I can
 
 As a football fan, I want a place to keep a record of my favourite team, so I can look back at how they have played over the season.
 
+As a user, I want to be notified if my login information is incorrect, so I can input the correct details and log in to my account.
+
 ## _**Wireframes**_
 
 ### _**Home Page**_
@@ -166,4 +168,47 @@ hamburger menu is pressed.
 
 ## _**Testing**_
 
-A lot of the testing was carried out using the developer tools in 
+A lot of the testing was carried out using the developer tools in Google Chrome, I did this so that I could test whilst I was devloping the application
+and make changes as I went along. It also helped me test the application on smaller devices and to ensure it was responsive. 
+I also used tools such as [W3C Markup Validation Service](https://validator.w3.org/) to ensure my code was correct and had no errors.
+
+### _**User Story Tests**_
+
+**1. Register for an account**
+
+i.   Open the application. <br>
+ii.  Does the home page appear? <br>
+iii. Are the menu links visible in the navigation bar? <br>
+iv.  Click on the **register** menu link. <br>
+v.   Does the register an account page open? <br>
+vi.  Click the register button, does the required field message appear? <br>
+vii. Fill out the fields correctly and click register. <br>
+vii. Do you go to the home page and a flashed message appears saying you have successfully registered? <br>
+ix.  Click log out then click the register link again. Click on the link to the login page underneath the form. Do you go to the login page? <br>
+x. Fill out the form with a username that already exists. Does a flashed message appear advising the username is taken?
+
+**1a. Register for an account on mobile device**
+
+i.   Click on the hamburger menu link. Does the side navigation bar appear?<br>
+ii.  Click the register link, does a pop up modal form appear? <br>
+iii. Follow steps 6-9 above. <br>
+
+**All tests performed and no errors found.**
+
+**2. Log in to your account**
+
+i.   Click the login link in the navigation bar. Does the login page appear? <br>
+ii.  Click the login button, does the required field message appear? <br>
+iii. Fill out the fields correctly and click log in. <br>
+iv.  Does the My reports page open? <br>
+v.   Click log out and fill an incorrect username in, does a flashed message appear saying the username or password is incorrect? <br>
+vi.  Click log out and fill an incorrect password in, does a flashed message appear saying the username or password is incorrect? <br>
+vii. CLick the Register account link underneath the form, does this take you to the register page?
+
+**2a Log in to your account on a smaller device**
+
+i.   Click on the hamburger menu link. Does the side navigation bar appear?<br>
+ii.  Click the log in link, does a pop up modal form appear? <br>
+iii. Follow steps 2-7 above. <br>
+
+**All tests performed and no errors found.**
