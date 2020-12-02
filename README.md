@@ -44,26 +44,26 @@ The application is aimed at but not restricted to the following users :
 
 ### _**User Stories**_
 
-As a referee, I want to register for an account, so that I can begin to submit my match reports.
+1. As a referee, I want to register for an account, so that I can begin to submit my match reports.
 
-As a referee, I want to login to my account, so that I can view and submit reports.
+2. As a referee, I want to login to my account, so that I can view and submit reports.
 
-As a referee, I want to submit a report on a match I have just referee'd, so that I can store the details as they are fresh 
+3. As a referee, I want to submit a report on a match I have just referee'd, so that I can store the details as they are fresh 
 in my mind.
 
-As a referee, I want to view my previous submitted reports, so they can help me submit the match details to the league.
+4. As a referee, I want to view my previous submitted reports, so they can help me submit the match details to the league.
 
-As a referee, I want to edit my reports, so I can change any details that may be incorrect.
+5. As a referee, I want to edit my reports, so I can change any details that may be incorrect.
 
-As a referee, I want to delete my reports, so I can only keep the reports that haven't been submitted to the league.
+6. As a referee, I want to delete my reports, so I can only keep the reports that haven't been submitted to the league.
 
-As an administrator, I want to view all users reports, so I can moderate what has been submitted.
+7. As an administrator, I want to view all users reports, so I can moderate what has been submitted.
 
-As a football coach, I want to store match reports of the team I coach, so I can keep a track of the team throughout the season.
+8. As a football coach, I want to store match reports of the team I coach, so I can keep a track of the team throughout the season.
 
-As a football fan, I want a place to keep a record of my favourite team, so I can look back at how they have played over the season.
+9. As a football fan, I want a place to keep a record of my favourite team, so I can look back at how they have played over the season.
 
-As a user, I want to be notified if my login information is incorrect, so I can input the correct details and log in to my account.
+10. As a user, I want to be notified if my login information is incorrect, so I can input the correct details and log in to my account.
 
 ## _**Wireframes**_
 
@@ -183,22 +183,22 @@ iv.  Click on the **register** menu link. <br>
 v.   Does the register an account page open? <br>
 vi.  Click the register button, does the required field message appear? <br>
 vii. Fill out the fields correctly and click register. <br>
-vii. Do you go to the home page and a flashed message appears saying you have successfully registered? <br>
-ix.  Click log out then click the register link again. Click on the link to the login page underneath the form. Do you go to the login page? <br>
+viii. Do you go to the home page and a flashed message appears saying you have successfully registered? <br>
+ix. Click log out then click the register link again. Click on the link to the login page underneath the form. Do you go to the login page? <br>
 x. Fill out the form with a username that already exists. Does a flashed message appear advising the username is taken?
 
 **1a. Register for an account on mobile device**
 
 i.   Click on the hamburger menu link. Does the side navigation bar appear?<br>
 ii.  Click the register link, does a pop up modal form appear? <br>
-iii. Follow steps 6-9 above. <br>
+iii. Follow steps 6-10 above. <br>
 
 **All tests performed and no errors found.**
 
 **2. Log in to your account**
 
-i.   Click the login link in the navigation bar. Does the login page appear? <br>
-ii.  Click the login button, does the required field message appear? <br>
+i.   Click the **log in** link in the navigation bar. Does the login page appear? <br>
+ii.  Click the log in button, does the required field message appear? <br>
 iii. Fill out the fields correctly and click log in. <br>
 iv.  Does the My reports page open? <br>
 v.   Click log out and fill an incorrect username in, does a flashed message appear saying the username or password is incorrect? <br>
@@ -210,5 +210,47 @@ vii. CLick the Register account link underneath the form, does this take you to 
 i.   Click on the hamburger menu link. Does the side navigation bar appear?<br>
 ii.  Click the log in link, does a pop up modal form appear? <br>
 iii. Follow steps 2-7 above. <br>
+
+**All tests performed and no errors found.**
+
+**3. Submit a report**
+
+i.   When logged in, click the **Submit Report** link in the navigation bar. Does the submit report page open? <br>
+ii.  Click the submit report button, does the required field message appear? <br>
+iii. Fill in all the text fields on the form. <br>
+iv.  Click on the date field, does a date selector appear? Once the date is chosen does the correct date appear in the field? <br>
+v.   Click the Match Type field, do 4 options appear? Once selected does the correct option appear in that field? <br>
+vi.  Once all fields are populated, click the submit report button. Dores a flashed message appear saying report added succesfully? <br>
+vii. Have you been redirected to the My reports page? Check to see if the report is added to the bottom of the reports section. <br>
+
+**All tests performed and no errors found.**
+
+**4. View Reports**
+
+i.   Log in to a registered account. <br>
+ii.  Are you directed to the My Reports page once logged in? <br>
+iii. Does a list of reports appear? <br>
+iv.  Click on a report, does the report expand to show more information?<br>
+v.   Is the report clear and legible? <br>
+vi.  Click on the report header, does the report collapse? <br>
+vii. Click on another report, are the details different to the previous report? <br>
+viii. Type a relevant word in the search field and click search, do any reports appear? <br>
+ix.  Click reset, do all reports appear? <br>
+
+**All tests performed and no errors found.**
+
+**5. Edit a report**
+
+i.   Log in to a registered account. <br>   
+ii.  Are you directed to the My Reports page once logged in? <br>
+iii. Does a list of reports appear? <br>
+iv.  Click on a report, does the report expand to show more information?<br>
+v.   Does the edit report button appear at the bottom of the report? <br>
+vi.  Click the edit report button page, does the edit report page appear with the fields already filled? <br>
+vii. Make changes to the report. And click edit report.<br>
+viii. Are you directed back to the My reports page? <br>
+ix.  Check the report to ensure the changes have been saved. <br>
+x.   Click edit on another report. At the bottom of the edit report form click cancel. <br>
+xi.  Are you directed back to the My reports page? <br> 
 
 **All tests performed and no errors found.**
