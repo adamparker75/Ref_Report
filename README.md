@@ -293,4 +293,19 @@ vii. Check the My Reports page to ensure more than one report is now showing.
 
 **The website was tested using a Microsoft Surface Pro on Windows 10, on the following browsers**
 
-* Google Chrome - 
+* Google Chrome - Version 87.0.4280.88 (Official Build) (64-bit)
+* Microsoft Edge - Version 87.0.664.52 (Official build) (64-bit)
+* Mozilla Firefox - Version 83.0 (64-bit)
+
+The website functioned correctly on all of these browsers. The forms appeared correctly, all modal pop ups worked. No issues found 
+on any browser.
+
+**The website was also tested on a number of devices as listed below**
+
+* Google Pixel 3 xl using Google Chrome on Android 11.
+
+* Moto E5 using using Google Chrome on Android 8.1.
+
+* Ipad 6th Generation using Safari on IOS 13.4.
+
+* Iphone 8 using Safari on IOS 13.4.
