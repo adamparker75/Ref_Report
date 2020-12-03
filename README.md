@@ -309,3 +309,14 @@ on any browser.
 * Ipad 6th Generation using Safari on IOS 13.4.
 
 * Iphone 8 using Safari on IOS 13.4.
+
+**I used the following websites for validation of my code**
+
+[HTML validation.](https://validator.w3.org/)
+
+[CSS validation.](https://jigsaw.w3.org/css-validator/)
+
+[JavaScript validation.](https://jshint.com/)
+
+### _**Issues found in testing**_
+

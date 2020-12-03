@@ -17,34 +17,41 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+ADMIN_USERNAME = "admin"
+
+
+# --------- Helpers -----------
+def is_admin() -> bool:
+    user = session.get('user')
+    return user and user == ADMIN_USERNAME
+
+
+def is_logged_in():
+    return session.get('user')
+
 
 # Error Handlers
 @app.errorhandler(404)
 def not_found(e):
-
     """
     Returns the error 404 template if the
     app gets a 404 not found error.
     """
-
     return render_template("error_404.html")
 
 
 @app.errorhandler(Exception)
 def server_error(e):
-
     """
     Returns the error 500 template if the
     app gets any other exceptions.
     """
-
     return render_template("error_500.html")
 
 
 # Homepage function
 @app.route("/")
 def index():
-
     return render_template("index.html")
 
 
@@ -58,8 +65,10 @@ def get_reports():
 # Admin Reports route
 @app.route("/admin_reports")
 def admin_reports():
-    # Calls the get reports function
-    return get_reports_admin_or_user("admin_reports.html")
+    if is_admin():
+        # Calls the get reports function
+        return get_reports_admin_or_user("admin_reports.html")
+    return redirect(url_for("login"))
 
 
 # Get reports function
@@ -204,35 +213,45 @@ def submit_report():
 # Edit Report function
 @app.route("/edit_report/<report_id>", methods=["GET", "POST"])
 def edit_report(report_id):
-    if request.method == "POST":
-        update = {
-            "referee_name": request.form.get("referee_name"),
-            "report_date": request.form.get("report_date"),
-            "match_type": request.form.get("match_type"),
-            "report_fixture": request.form.get("report_fixture"),
-            "report_score": request.form.get("report_score"),
-            "report_scorers": request.form.get("report_scorers"),
-            "report_cautions": request.form.get("report_cautions"),
-            "report_dismissals": request.form.get("report_dismissals"),
-            "report_report": request.form.get("report_report"),
-            "created_by": session["user"]
-        }
-        # Updates the report by using it's id key
-        mongo.db.reports.update({"_id": ObjectId(report_id)}, update)
-        flash("Report successfully updated!", "success")
-        return redirect(url_for("get_reports"))
-    # Finds the report by using it's unique id key
-    report = mongo.db.reports.find_one({"_id": ObjectId(report_id)})
-    match = mongo.db.match.find().sort("match_type", 1)
-    # Tells the page which specific report to modify
-    return render_template("/edit_report.html", report=report, match=match)
+    # Check if the user is logged in
+    user = session.get('user')
+    if user:
+        report = mongo.db.reports.find_one({"_id": ObjectId(report_id)})
+
+        # Check if the user is the author or admin
+        if user in [ADMIN_USERNAME, report['created_by']]:
+            if request.method == "POST":
+                update = {
+                    "referee_name": request.form.get("referee_name"),
+                    "report_date": request.form.get("report_date"),
+                    "match_type": request.form.get("match_type"),
+                    "report_fixture": request.form.get("report_fixture"),
+                    "report_score": request.form.get("report_score"),
+                    "report_scorers": request.form.get("report_scorers"),
+                    "report_cautions": request.form.get("report_cautions"),
+                    "report_dismissals": request.form.get("report_dismissals"),
+                    "report_report": request.form.get("report_report"),
+                    "created_by": session["user"]
+                }
+                # Updates the report by using it's id key
+                mongo.db.reports.update({"_id": ObjectId(report_id)}, update)
+                flash("Report successfully updated!", "success")
+                return redirect(url_for("get_reports"))
+            # Finds the report by using it's unique id key
+            report = mongo.db.reports.find_one({"_id": ObjectId(report_id)})
+            match = mongo.db.match.find().sort("match_type", 1)
+            # Tells the page which specific report to modify
+            return render_template(
+                "/edit_report.html", report=report, match=match)
+    return redirect(url_for("login"))
 
 
 @app.route("/delete_report/<report_id>")
 def delete_report(report_id):
-    # Removes a specific report by using the report id
-    mongo.db.reports.remove({"_id": ObjectId(report_id)})
-    flash("Report succesfully deleted!", "success")
+    if is_logged_in():
+        # Removes a specific report by using the report id
+        mongo.db.reports.remove({"_id": ObjectId(report_id)})
+        flash("Report succesfully deleted!", "success")
     return redirect(url_for("get_reports"))
 
 
