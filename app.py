@@ -21,7 +21,7 @@ ADMIN_USERNAME = "admin"
 
 
 # --------- Helpers -----------
-def is_admin() -> bool:
+def is_admin():
     user = session.get('user')
     return user and user == ADMIN_USERNAME
 
@@ -30,7 +30,34 @@ def is_logged_in():
     return session.get('user')
 
 
-# Error Handlers
+# Search function
+def generic_search(form_name: str, html_template_name: str):
+
+    """
+    form_search variable gets the form name from the search
+    form.
+    reports variable performs a text index search on the
+    reports collection in MongoDb.
+    """
+
+    form_search = request.form.get(form_name)
+    reports = mongo.db.reports.find(
+        {"$text": {"$search": form_search}})
+    return render_template(html_template_name, reports=reports)
+
+
+# Get reports function
+def get_reports_admin_or_user(html_template_name: str):
+    """
+    Finds the data from the reports collection in
+    MongoDB, and passes the reports variable to the
+    html template assigned in the reports routes above.
+    """
+    reports = mongo.db.reports.find()
+    return render_template(html_template_name, reports=reports)
+
+
+# --------- Error Handlers ---------
 @app.errorhandler(404)
 def not_found(e):
     """
@@ -49,6 +76,7 @@ def server_error(e):
     return render_template("error_500.html")
 
 
+# --------- App functions ----------
 # Homepage function
 @app.route("/")
 def index():
@@ -71,19 +99,6 @@ def admin_reports():
     return redirect(url_for("login"))
 
 
-# Get reports function
-def get_reports_admin_or_user(html_template_name: str):
-
-    """
-    Finds the data from the reports collection in
-    MongoDB, and passes the reports variable to the
-    html template assigned in the reports routes above.
-    """
-
-    reports = mongo.db.reports.find()
-    return render_template(html_template_name, reports=reports)
-
-
 # Report search
 @app.route("/report_search", methods=["GET", "POST"])
 def report_search():
@@ -96,22 +111,6 @@ def report_search():
 def admin_search():
     # Calls the search function
     return generic_search("admin_search", "admin_reports.html")
-
-
-# Search function
-def generic_search(form_name: str, html_template_name: str):
-
-    """
-    form_search variable gets the form name from the search
-    form.
-    reports variable performs a text index search on the
-    reports collection in MongoDb.
-    """
-
-    form_search = request.form.get(form_name)
-    reports = mongo.db.reports.find(
-        {"$text": {"$search": form_search}})
-    return render_template(html_template_name, reports=reports)
 
 
 # Register function
@@ -214,7 +213,7 @@ def submit_report():
 @app.route("/edit_report/<report_id>", methods=["GET", "POST"])
 def edit_report(report_id):
     # Check if the user is logged in
-    user = session.get('user')
+    user = is_logged_in()
     if user:
         report = mongo.db.reports.find_one({"_id": ObjectId(report_id)})
 
@@ -248,6 +247,7 @@ def edit_report(report_id):
 
 @app.route("/delete_report/<report_id>")
 def delete_report(report_id):
+    # Check if the user is logged in
     if is_logged_in():
         # Removes a specific report by using the report id
         mongo.db.reports.remove({"_id": ObjectId(report_id)})
