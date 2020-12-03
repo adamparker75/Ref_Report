@@ -12,7 +12,7 @@
 ## _**About**_
 
 
-This application was designed as a tool for use by Amateur referees. My son is keen to become a referee, 
+This website was designed as a tool for use by Amateur referees. My son is keen to become a referee, 
 and we found that other than writing the details in a notebook which are prone to being lost or misplaced,
 there was nothing else of use to him to keep a record of the match details. I wanted to design a tool to help
 him and other referrees to make a record of the game they have just taken charge of as soon as they get back
@@ -25,16 +25,16 @@ The deployed website can be viewed here - [Ref Report](https://adamp-ref-report.
 
 ## _**UX**_ 
 
-The application was designed to be easy and straight forward to use. I created a simple homepage with a small
-amount of information about the application, and also a link for new users to register an account. <br>
-The application is easy to navigate by either using the menu links in the header, or using the side navigation bar on smaller
+The site was designed to be easy and straight forward to use. I created a simple homepage with a small
+amount of information about how the site works, and also a link for new users to register an account. <br>
+The website is easy to navigate by either using the menu links in the header, or using the side navigation bar on smaller
 devices. <br>
-I designed the application to have a consistent look to each page, the forms are the same throughout whether logging in or 
+I designed the site to have a consistent look to each page, the forms are the same throughout whether logging in or 
 submitting a report, and each page has a familiar feel to it.
 
 ### _**Target Audience**_ 
 
-The application is aimed at but not restricted to the following users :
+The website is aimed at but not restricted to the following users :
 
 * Young amateur referees.
 * Senior amateur referees.
@@ -144,7 +144,7 @@ hamburger menu is pressed.
 
 [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) - Used to provide some of the styling.
 
-[Materialize CSS](https://materializecss.com/) - Used to create a number of the html elements such as the forms, the collapsible and the pop up modal. It was also used to make the application responsive. 
+[Materialize CSS](https://materializecss.com/) - Used to create a number of the html elements such as the forms, the collapsible and the pop up modal. It was also used to make the website responsive. 
 
 [Python](https://www.python.org/) - Used to code the flask application.
 
@@ -158,25 +158,25 @@ hamburger menu is pressed.
 
 [jQuery](https://jquery.com/) - Used with Materialize CSS to enable the collapsible accordion, and modal pop up.
 
-[Google Fonts](https://fonts.google.com/) - The application utilises the Lato font.
+[Google Fonts](https://fonts.google.com/) - The website utilises the Lato font.
 
-[Font Awesome](https://fontawesome.com/) - Used for the icons throughout the application.
+[Font Awesome](https://fontawesome.com/) - Used for the icons throughout the website.
 
 [Git](www.github.com) - Used for version control, and tracking changes in the repository.
 
-[Heroku](https://www.heroku.com/) - The platform used to deploy the application.
+[Heroku](https://www.heroku.com/) - The platform used to deploy the website.
 
 ## _**Testing**_
 
-A lot of the testing was carried out using the developer tools in Google Chrome, I did this so that I could test whilst I was devloping the application
-and make changes as I went along. It also helped me test the application on smaller devices and to ensure it was responsive. 
+A lot of the testing was carried out using the developer tools in Google Chrome, I did this so that I could test whilst I was devloping the website
+and make changes as I went along. It also helped me test the website on smaller devices and to ensure it was responsive. 
 I also used tools such as [W3C Markup Validation Service](https://validator.w3.org/) to ensure my code was correct and had no errors.
 
 ### _**User Story Tests**_
 
-**1. Register for an account**
+**User Story 1. Register for an account**
 
-i.   Open the application. <br>
+i.   Open the website. <br>
 ii.  Does the home page appear? <br>
 iii. Are the menu links visible in the navigation bar? <br>
 iv.  Click on the **register** menu link. <br>
@@ -187,7 +187,7 @@ viii. Do you go to the home page and a flashed message appears saying you have s
 ix. Click log out then click the register link again. Click on the link to the login page underneath the form. Do you go to the login page? <br>
 x. Fill out the form with a username that already exists. Does a flashed message appear advising the username is taken?
 
-**1a. Register for an account on mobile device**
+**User Story 1a. Register for an account on mobile device**
 
 i.   Click on the hamburger menu link. Does the side navigation bar appear?<br>
 ii.  Click the register link, does a pop up modal form appear? <br>
@@ -195,7 +195,7 @@ iii. Follow steps 6-10 above. <br>
 
 **All tests performed and no errors found.**
 
-**2. Log in to your account**
+**User Stories 2 & 10. Log in to your account**
 
 i.   Click the **log in** link in the navigation bar. Does the login page appear? <br>
 ii.  Click the log in button, does the required field message appear? <br>
@@ -205,7 +205,7 @@ v.   Click log out and fill an incorrect username in, does a flashed message app
 vi.  Click log out and fill an incorrect password in, does a flashed message appear saying the username or password is incorrect? <br>
 vii. CLick the Register account link underneath the form, does this take you to the register page?
 
-**2a Log in to your account on a smaller device**
+**User Story 2a Log in to your account on a smaller device**
 
 i.   Click on the hamburger menu link. Does the side navigation bar appear?<br>
 ii.  Click the log in link, does a pop up modal form appear? <br>
@@ -213,7 +213,7 @@ iii. Follow steps 2-7 above. <br>
 
 **All tests performed and no errors found.**
 
-**3. Submit a report**
+**User Story 3. Submit a report**
 
 i.   When logged in, click the **Submit Report** link in the navigation bar. Does the submit report page open? <br>
 ii.  Click the submit report button, does the required field message appear? <br>
@@ -225,7 +225,7 @@ vii. Have you been redirected to the My reports page? Check to see if the report
 
 **All tests performed and no errors found.**
 
-**4. View Reports**
+**User Story 4. View Reports**
 
 i.   Log in to a registered account. <br>
 ii.  Are you directed to the My Reports page once logged in? <br>
@@ -239,9 +239,9 @@ ix.  Click reset, do all reports appear? <br>
 
 **All tests performed and no errors found.**
 
-**5. Edit a report**
+**User Story 5. Edit a report**
 
-i.   Log in to a registered account. <br>   
+i.   Log in to a registered account. <br> 
 ii.  Are you directed to the My Reports page once logged in? <br>
 iii. Does a list of reports appear? <br>
 iv.  Click on a report, does the report expand to show more information?<br>
@@ -254,3 +254,43 @@ x.   Click edit on another report. At the bottom of the edit report form click c
 xi.  Are you directed back to the My reports page? <br> 
 
 **All tests performed and no errors found.**
+
+**User Story 6. Delete Reports**
+
+i.   Log in to a registered account. <br> 
+ii.  In the My Reports page, click on a report to expand it. <br>
+iii. Click on the Delete Report button, does a modal pop up confirming you want to delete the report? <br>
+iv.  Click cancel, are you directed back to the My Reports page? <br>
+v.   Expand a report and click delete report again. <br>
+vi.  Click delete report in the pop up modal, are you directed back to the My Reports page? <br> 
+vii. Has the report you deletd been removed from the My Reports page? <br>
+
+**All tests performed and no errors found.**
+
+**User Story 7. Administrator Reports**
+
+i.   Log in using an Administrator account.<br>
+ii.  Are you directed to the My Reports page once logged in? <br>
+iii. Can the All Reports link be viewed in the navigation bar? <br>
+iv.  Click on the All Reports link, are you taken to the All Reports page? <br>
+v.   Expand each report in turn, have they been submitted by different users? <br>
+vi.  Are the edit and delete buttons only available on the reports submitted by Admin? <br>
+
+**All tests performed and no errors found.**
+
+**User Stories 8 & 9. Football Fan / Coach**
+
+i.   Register a new account. <br>
+ii.  Click the Submit Report Link. <br>
+iii. Complete a report on your favourite team / Team that you coach. <br>
+iv.  Check the My Reports page to ensure the report is there. <br>
+v.   Log out of your account. <br>
+vi.  Log back in and expand the report to check the details. <br>
+vii. Submit another report. <br>
+vii. Check the My Reports page to ensure more than one report is now showing. 
+
+**All tests performed and no errors found.**
+
+**The website was tested using a Microsoft Surface Pro on Windows 10, on the following browsers**
+
+* Google Chrome - 
