@@ -337,12 +337,41 @@ click before the form appeared in a modal. On larger devices I removed the modal
 a form. 
 
 5. When a user deleted a report, I found that it was always the first report in the list that was deleted instead of the report they were
-wanting ti delete. this was because the delete button was targetting a modal ID. To resolve this I changed the delete button to target the 
+wanting to delete. This was because the delete button was targetting a modal ID. To resolve this I changed the delete button to target the 
 report_ID from the database.
 
 ## _**Deployment**_
 
+I developed Ref report using Gitpod, GitHub is used to store the repository, and the application is deployed on Heroku.
 
+The following steps are taken to deploy the application.
+
+### _**Git Clone**_
+
+1. Navigate to my GitHub repository - <https://github.com/adamparker75/Ref_Report>
+2. Click the dropdown that says code. 
+
+<p align="center">
+  <img width="300 height="50" src="static/files/git_clone.JPG">
+</p> 
+
+3. To clone with HTTPS copy the URL in the box.  
+
+<p align="center">
+  <img width="300 height="50" src="static/files/git_clone_2.JPG">
+</p> 
+
+4. Open up your preferred IDE (Integrated Development Environment)
+5. Change the directory to the location you want the clone to be made.
+6. Type **git clone** and then paste the copied URL from step 3.
+7. Press Enter and your local clone will be created.
+8. In your IDE create an **env.py** file. The file should contain the following.
+
+<p align="center">
+  <img width="300" height="100" src="static/files/env_py.JPG">
+</p> 
+
+9. 
 
 
 
