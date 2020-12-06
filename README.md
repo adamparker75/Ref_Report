@@ -371,7 +371,56 @@ The following steps are taken to deploy the application.
   <img width="300" height="100" src="static/files/env_py.JPG">
 </p> 
 
-9. 
+* Make sure to add in your own **Secret Key, Mongo URI and Mongo DB name**.
+* You should also add the **env.py** file to **.gitignore**. 
 
+### _**Deploying to Heroku**_
 
+1. In your IDE create a **requirements.txt** file by typing the following. <br>
+**pip3 freeze --local > requirements.txt**
+2. Next create a **Procfile** by typing the following. <br>
+**echo web: python app.py > Procfile**
+3. Open up the Procfile and if there is a blank line at the top of the file delete it.
+4. Commit and push the files to Github.
+5. Navigate to Heroku and login - <https://id.heroku.com/login>
+6. Click on the new button and then choose create new app.
 
+<p align="center">
+  <img width="300" src="static/files/heroku_deploy.JPG">
+</p> 
+
+7. Give the app a name, choose a region, and then click create app.
+
+<p align="center">
+  <img width="400" src="static/files/heroku_deploy_2.JPG">
+</p>
+
+8. Click connect to GitHub and then search for the repository name. Once found, click connect.
+
+<p align="center">
+  <img width="400" src="static/files/heroku_deploy_3.JPG">
+</p>
+
+8. Click the settings tab in your Heroku app and then click reveal config vars.
+
+<p align="center">
+  <img width="300" src="static/files/heroku_deploy_4.JPG">
+</p>
+
+9. Add in the same variables as the **env.py** file.
+
+<p align="center">
+  <img width="400" src="static/files/heroku_deploy_5.JPG">
+</p>
+
+10. Click back to the deploy tab, choose a branch to deploy and then click enable automatic deploys.
+
+<p align="center">
+  <img width="400" src="static/files/heroku_deploy_7.JPG">
+</p>
+
+11. Click open app at the top of the page.
+
+<p align="center">
+  <img width="300" src="static/files/heroku_deploy_6.JPG">
+</p>
