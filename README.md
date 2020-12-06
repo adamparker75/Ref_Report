@@ -512,3 +512,12 @@ The following steps are taken to deploy the application.
 * The code institute mini Task Manager project tutorial was used as a reference and guide.
 * The wireframes were created with [Balsamiq](https://balsamiq.com/).
 * The favicon was created on [favicon-generator](https://www.favicon-generator.org/).
+
+### _**Media**_
+
+* All of the images used on the site were taken from [Google Images](https://www.google.com/imghp?hl=EN).
+
+### _**Acknowledgements**_
+
+* To my wife **Claire Parker** for helping me test the website.
+* To my mentor **Reuben Ferrante** for once again guiding me through this project, and being a great help as always.
