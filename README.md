@@ -5,12 +5,11 @@
 </div> 
 
 <p align="center">
-    <img width="600" height="400" src="static/files/ref_report_wireframe_main_image.jpg">
+    <img width="600" height="400" src="static/files/ref_report_readme_main_image.jpg">
 </p>
 
 
 ## _**About**_
-
 
 This website was designed as a tool for use by Amateur referees. My son is keen to become a referee, 
 and we found that other than writing the details in a notebook which are prone to being lost or misplaced,
@@ -172,7 +171,7 @@ A lot of the testing was carried out using the developer tools in Google Chrome,
 and make changes as I went along. It also helped me test the website on smaller devices and to ensure it was responsive. 
 I also used tools such as [W3C Markup Validation Service](https://validator.w3.org/) to ensure my code was correct and had no errors.
 
-The user story test can be found here - [Testing.MD](static/files/TESTING.MD)
+### The testing documentation can be found here - [Testing.MD](static/files/TESTING.MD)
 
 ## _**Deployment**_
 

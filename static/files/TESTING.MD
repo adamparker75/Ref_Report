@@ -1,8 +1,8 @@
-## _**Testing**_
+<div align="center">
 
-A lot of the testing was carried out using the developer tools in Google Chrome, I did this so that I could test whilst I was devloping the website
-and make changes as I went along. It also helped me test the website on smaller devices and to ensure it was responsive. 
-I also used tools such as [W3C Markup Validation Service](https://validator.w3.org/) to ensure my code was correct and had no errors.
+# _**Testing**_
+
+</div>
 
 ### _**User Story Tests**_
 
