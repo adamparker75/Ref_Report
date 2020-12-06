@@ -194,6 +194,8 @@ hamburger menu is pressed.
 
 * **Edit / Delete Buttons** - Users have the option to edit or delete any of their reports.
 
+* **Search Function** - Users can search their reports using keywords, for example the name of a particular team. 
+
 ### _**Features left to implement**_
 
 <div align="center">
@@ -494,3 +496,19 @@ The following steps are taken to deploy the application.
 <p align="center">
   <img width="300" src="static/files/heroku_deploy_6.JPG">
 </p>
+
+<div align="center">
+
+## **Credits**
+
+</div>
+
+### _**Content**_
+
+* The code for the navigation bar was taken from [Materialize CSS](https://materializecss.com/navbar.html).
+* The collapsible accordion was taken from [Materialize CSS](https://materializecss.com/collapsible.html).
+* The modal pop up was taken from [Materialize CSS](https://materializecss.com/modals.html).
+* The search functionality was created with help from the code institute data centric module.
+* The code institute mini Task Manager project tutorial was used as a reference and guide.
+* The wireframes were created with [Balsamiq](https://balsamiq.com/).
+* The favicon was created on [favicon-generator](https://www.favicon-generator.org/).
