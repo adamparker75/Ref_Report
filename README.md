@@ -511,6 +511,7 @@ The following steps are taken to deploy the application.
 * The search functionality was created with help from the code institute data centric module.
 * The code institute mini Task Manager project tutorial was used as a reference and guide.
 * The wireframes were created with [Balsamiq](https://balsamiq.com/).
+* Icon for the favicon was made by [Freepik](http://www.freepik.com/)'
 * The favicon was created on [favicon-generator](https://www.favicon-generator.org/).
 
 ### _**Media**_
