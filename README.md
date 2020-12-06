@@ -1,6 +1,6 @@
 <div align="center">
 
-# _**Ref Report**_
+# **Ref Report**
 
 </div> 
 
@@ -8,8 +8,12 @@
     <img width="600" height="400" src="static/files/ref_report_readme_main_image.jpg">
 </p>
 
+<div align="center">
 
-## _**About**_
+## **About**
+
+</div>
+
 
 This website was designed as a tool for use by Amateur referees. My son is keen to become a referee, 
 and we found that other than writing the details in a notebook which are prone to being lost or misplaced,
@@ -21,8 +25,11 @@ existing reports and also edit and delete reports as necessary. <br>
 
 The deployed website can be viewed here - [Ref Report](https://adamp-ref-report.herokuapp.com/)
 
+<div align="center">
 
-## _**UX**_ 
+## **UX**
+
+</div>
 
 The site was designed to be easy and straight forward to use. I created a simple homepage with a small
 amount of information about how the site works, and also a link for new users to register an account. <br>
@@ -64,7 +71,11 @@ in my mind.
 
 10. As a user, I want to be notified if my login information is incorrect, so I can input the correct details and log in to my account.
 
+<div align="center">
+
 ## _**Wireframes**_
+
+</div>
 
 ### _**Home Page**_
 <br>
@@ -115,7 +126,11 @@ in my mind.
 </p>
 <br>
 
+<div align="center">
+
 ## _**Features**_
+
+</div>
 
 * **Navigation Bar** - The navigation bar is consistent across the site, it uses [Materialize CSS](https://materializecss.com/) to make it beahave responsively 
 on smaller devices.
@@ -135,9 +150,11 @@ hamburger menu is pressed.
 
 ### _**Features left to implement**_
 
+<div align="center">
 
+## **Technologies Used**
 
-## _**Technologies Used**_
+</div>
 
 [HTML](https://en.wikipedia.org/wiki/HTML5) - Provides the content and structure of the templates.
 
@@ -165,7 +182,11 @@ hamburger menu is pressed.
 
 [Heroku](https://www.heroku.com/) - The platform used to deploy the website.
 
-## _**Testing**_
+<div align="center">
+
+## **Testing**
+
+</div>
 
 A lot of the testing was carried out using the developer tools in Google Chrome, I did this so that I could test whilst I was devloping the website
 and make changes as I went along. It also helped me test the website on smaller devices and to ensure it was responsive. 
@@ -173,7 +194,11 @@ I also used tools such as [W3C Markup Validation Service](https://validator.w3.o
 
 ### The testing documentation can be found here - [Testing.MD](static/files/TESTING.MD)
 
-## _**Deployment**_
+<div align="center">
+
+## **Deployment**
+
+</div>
 
 I developed Ref report using Gitpod, GitHub is used to store the repository, and the application is deployed on Heroku.
 
