@@ -15,15 +15,15 @@
 </div>
 
 
-This website was designed as a tool for use by Amateur referees. My son is keen to become a referee, 
+This web appplication was designed as a tool for use by Amateur referees. My son is keen to become a referee, 
 and we found that other than writing the details in a notebook which are prone to being lost or misplaced,
 there was nothing else of use to him to keep a record of the match details. I wanted to design a tool to help
 him and other referrees to make a record of the game they have just taken charge of as soon as they get back
 to the dressing room. <br>
 Users are able to register a new account, login to their account where they can submit a new report, view all 
 existing reports and also edit and delete reports as necessary. <br>
-
-The deployed website can be viewed here - [Ref Report](https://adamp-ref-report.herokuapp.com/)
+application
+The deployed application can be viewed here - [Ref Report](https://adamp-ref-report.herokuapp.com/)
 
 <div align="center">
 
@@ -33,14 +33,14 @@ The deployed website can be viewed here - [Ref Report](https://adamp-ref-report.
 
 The site was designed to be easy and straight forward to use. I created a simple homepage with a small
 amount of information about how the site works, and also a link for new users to register an account. <br>
-The website is easy to navigate by either using the menu links in the header, or using the side navigation bar on smaller
+The application is easy to navigate by either using the menu links in the header, or using the side navigation bar on smaller
 devices. <br>
 I designed the site to have a consistent look to each page, the forms are the same throughout whether logging in or 
 submitting a report, and each page has a familiar feel to it.
 
 ### _**Target Audience**_ 
 
-The website is aimed at but not restricted to the following users :
+The application is aimed at but not restricted to the following users :
 
 * Young amateur referees.
 * Senior amateur referees.
@@ -194,6 +194,8 @@ hamburger menu is pressed.
 
 * **Edit / Delete Buttons** - Users have the option to edit or delete any of their reports.
 
+* **Social Media Links** - Allows the user to link to various social media pages when clicked.
+
 * **Search Function** - Users can search their reports using keywords, for example the name of a particular team. 
 
 ### _**Features left to implement**_
@@ -226,13 +228,13 @@ hamburger menu is pressed.
 
 [jQuery](https://jquery.com/) - Used with Materialize CSS to enable the collapsible accordion, and modal pop up.
 
-[Google Fonts](https://fonts.google.com/) - The website utilises the Lato font.
+[Google Fonts](https://fonts.google.com/) - The application utilises the Lato font.
 
-[Font Awesome](https://fontawesome.com/) - Used for the icons throughout the website.
+[Font Awesome](https://fontawesome.com/) - Used for the icons throughout the application.
 
 [Git](www.github.com) - Used for version control, and tracking changes in the repository.
 
-[Heroku](https://www.heroku.com/) - The platform used to deploy the website.
+[Heroku](https://www.heroku.com/) - The platform used to deploy the application.
 
 <div align="center">
 
@@ -240,15 +242,15 @@ hamburger menu is pressed.
 
 </div>
 
-A lot of the testing was carried out using the developer tools in Google Chrome, I did this so that I could test whilst I was devloping the website
-and make changes as I went along. It also helped me test the website on smaller devices and to ensure it was responsive. 
+A lot of the testing was carried out using the developer tools in Google Chrome, I did this so that I could test whilst I was devloping the application
+and make changes as I went along. It also helped me test the application on smaller devices and to ensure it was responsive. 
 I also used tools such as [W3C Markup Validation Service](https://validator.w3.org/) to ensure my code was correct and had no errors.
 
 ### _**User Story Tests**_
 
 **User Story 1. Register for an account**
 
-1. Open the website. <br>
+1. Open the application. <br>
 2. Does the home page appear? <br>
 3. Are the menu links visible in the navigation bar? <br>
 4. Click on the **register** menu link. <br>
@@ -363,16 +365,16 @@ I also used tools such as [W3C Markup Validation Service](https://validator.w3.o
 
 **All tests performed and no errors found.**
 
-**The website was tested using a Microsoft Surface Pro on Windows 10, on the following browsers**
+**The application was tested using a Microsoft Surface Pro on Windows 10, on the following browsers**
 
 * Google Chrome - Version 87.0.4280.88 (Official Build) (64-bit)
 * Microsoft Edge - Version 87.0.664.52 (Official build) (64-bit)
 * Mozilla Firefox - Version 83.0 (64-bit)
 
-The website functioned correctly on all of these browsers. The forms appeared correctly, all modal pop ups worked. No issues found 
+The application functioned correctly on all of these browsers. The forms appeared correctly, all modal pop ups worked. No issues found 
 on any browser.
 
-**The website was also tested on a number of devices as listed below**
+**The application was also tested on a number of devices as listed below**
 
 * Google Pixel 3 xl using Google Chrome on Android 11.
 
@@ -524,5 +526,5 @@ The following steps are taken to deploy the application.
 
 ### _**Acknowledgements**_
 
-* To my wife **Claire Parker** for helping me test the website.
+* To my wife **Claire Parker** for helping me test the application.
 * To my mentor **Reuben Ferrante** for once again guiding me through this project, and being a great help as always.
