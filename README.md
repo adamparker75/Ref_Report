@@ -22,8 +22,8 @@ him and other referrees to make a record of the game they have just taken charge
 to the dressing room. <br>
 Users are able to register a new account, login to their account where they can submit a new report, view all 
 existing reports and also edit and delete reports as necessary. <br>
-application
-The deployed application can be viewed here - [Ref Report](https://adamp-ref-report.herokuapp.com/)
+
+The deployed app can be viewed here - [Ref Report](https://adamp-ref-report.herokuapp.com/)
 
 <div align="center">
 
@@ -31,16 +31,16 @@ The deployed application can be viewed here - [Ref Report](https://adamp-ref-rep
 
 </div>
 
-The site was designed to be easy and straight forward to use. I created a simple homepage with a small
+The app was designed to be easy and straight forward to use. I created a simple homepage with a small
 amount of information about how the site works, and also a link for new users to register an account. <br>
-The application is easy to navigate by either using the menu links in the header, or using the side navigation bar on smaller
+The app is easy to navigate by either using the menu links in the header, or using the side navigation bar on smaller
 devices. <br>
-I designed the site to have a consistent look to each page, the forms are the same throughout whether logging in or 
+I designed the app to have a consistent look to each page, the forms are the same throughout whether logging in or 
 submitting a report, and each page has a familiar feel to it.
 
 ### _**Target Audience**_ 
 
-The application is aimed at but not restricted to the following users :
+The app is aimed at but not restricted to the following users :
 
 * Young amateur referees.
 * Senior amateur referees.
@@ -200,7 +200,7 @@ hamburger menu is pressed.
 
 ### _**Features left to implement**_
 
-* The potential to link to regional FA websites to submit reports direct from the application.
+* The potential to link to regional FA websites to submit reports direct from the app.
 * A message board for users to share their refereeing experiences.
 
 
@@ -216,9 +216,9 @@ hamburger menu is pressed.
 
 [Materialize CSS](https://materializecss.com/) - Used to create a number of the html elements such as the forms, the collapsible and the pop up modal. It was also used to make the website responsive. 
 
-[Python](https://www.python.org/) - Used to code the flask application.
+[Python](https://www.python.org/) - Used to code the flask app.
 
-[Flask](https://flask.palletsprojects.com/en/1.1.x/) - A micro web framework used to create the application.
+[Flask](https://flask.palletsprojects.com/en/1.1.x/) - A micro web framework used to create the app.
 
 [Werkzeug Security](https://werkzeug.palletsprojects.com/en/1.0.x/utils/) - Used for the users password security.
 
@@ -228,13 +228,13 @@ hamburger menu is pressed.
 
 [jQuery](https://jquery.com/) - Used with Materialize CSS to enable the collapsible accordion, and modal pop up.
 
-[Google Fonts](https://fonts.google.com/) - The application utilises the Lato font.
+[Google Fonts](https://fonts.google.com/) - The app utilises the Lato font.
 
-[Font Awesome](https://fontawesome.com/) - Used for the icons throughout the application.
+[Font Awesome](https://fontawesome.com/) - Used for the icons throughout the app.
 
 [Git](www.github.com) - Used for version control, and tracking changes in the repository.
 
-[Heroku](https://www.heroku.com/) - The platform used to deploy the application.
+[Heroku](https://www.heroku.com/) - The platform used to deploy the app.
 
 <div align="center">
 
@@ -242,15 +242,15 @@ hamburger menu is pressed.
 
 </div>
 
-A lot of the testing was carried out using the developer tools in Google Chrome, I did this so that I could test whilst I was devloping the application
-and make changes as I went along. It also helped me test the application on smaller devices and to ensure it was responsive. 
+A lot of the testing was carried out using the developer tools in Google Chrome, I did this so that I could test whilst I was devloping the app
+and make changes as I went along. It also helped me test the app on smaller devices and to ensure it was responsive. 
 I also used tools such as [W3C Markup Validation Service](https://validator.w3.org/) to ensure my code was correct and had no errors.
 
 ### _**User Story Tests**_
 
 **User Story 1. Register for an account**
 
-1. Open the application. <br>
+1. Open the app. <br>
 2. Does the home page appear? <br>
 3. Are the menu links visible in the navigation bar? <br>
 4. Click on the **register** menu link. <br>
@@ -365,16 +365,16 @@ I also used tools such as [W3C Markup Validation Service](https://validator.w3.o
 
 **All tests performed and no errors found.**
 
-**The application was tested using a Microsoft Surface Pro on Windows 10, on the following browsers**
+**The app was tested using a Microsoft Surface Pro on Windows 10, on the following browsers**
 
 * Google Chrome - Version 87.0.4280.88 (Official Build) (64-bit)
 * Microsoft Edge - Version 87.0.664.52 (Official build) (64-bit)
 * Mozilla Firefox - Version 83.0 (64-bit)
 
-The application functioned correctly on all of these browsers. The forms appeared correctly, all modal pop ups worked. No issues found 
+The app functioned correctly on all of these browsers. The forms appeared correctly, all modal pop ups worked. No issues found 
 on any browser.
 
-**The application was also tested on a number of devices as listed below**
+**The app was also tested on a number of devices as listed below**
 
 * Google Pixel 3 xl using Google Chrome on Android 11.
 
@@ -420,9 +420,9 @@ report_ID from the database.
 
 </div>
 
-I developed Ref report using Gitpod, GitHub is used to store the repository, and the application is deployed on Heroku.
+I developed Ref report using Gitpod, GitHub is used to store the repository, and the app is deployed on Heroku.
 
-The following steps are taken to deploy the application.
+The following steps are taken to deploy the app.
 
 ### _**Git Clone**_
 
@@ -526,5 +526,5 @@ The following steps are taken to deploy the application.
 
 ### _**Acknowledgements**_
 
-* To my wife **Claire Parker** for helping me test the application.
+* To my wife **Claire Parker** for helping me test the app.
 * To my mentor **Reuben Ferrante** for once again guiding me through this project, and being a great help as always.
