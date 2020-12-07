@@ -61,7 +61,7 @@ in my mind.
 
 5. As a referee, I want to edit my reports, so I can change any details that may be incorrect.
 
-6. As a referee, I want to delete my reports, so I can only keep the reports that haven't been submitted to the league.
+6. As a referee, I want to delete my reports, so I can remove any that are no longer relevant.
 
 7. As an administrator, I want to view all users reports, so I can moderate what has been submitted.
 
@@ -87,7 +87,7 @@ could select the different match types on the form.
 
 **Reports Collection**
 
-The reports collection was used to store the data submitted by the user from the submit report form. A text index was created on this collection on the following keys
+The reports collection was used to store the data submitted by the user from the submit report form. A text index was created on this collection on the following keys,
 match_type, referee_name, report_fixture, and report_report. This was to enable users to search for keywords if they were looking for a particular report.
 
 | Key in Collection | Data Type |
@@ -178,7 +178,7 @@ The users collection is used to store a users personal information, which is sub
 
 </div>
 
-* **Navigation Bar** - The navigation bar is consistent across the site, it uses [Materialize CSS](https://materializecss.com/) to make it beahave responsively 
+* **Navigation Bar** - The navigation bar is consistent across the site, it uses [Materialize CSS](https://materializecss.com/) to make it behave responsively 
 on smaller devices.
 
 * **Side Navigation Bar** - When viewed on smaller devices the links in the navigation bar, appear from the left when the 
@@ -186,7 +186,7 @@ hamburger menu is pressed.
 
 * **Modal Pop Up** - The links to the log in and registration page utilise a modal pop up when viewed on smaller devices.
 
-* **Collapsible Accordion** - The reports page utilises a collapsible from [Materialize CSS](https://materializecss.com/) when viewing the reports.
+* **Collapsible Accordion** - The reports page utilises a collapsible accordion from [Materialize CSS](https://materializecss.com/) when viewing the reports.
 
 * **Submit Report** - Allows users to submit a match report to the database.
 
@@ -197,6 +197,10 @@ hamburger menu is pressed.
 * **Search Function** - Users can search their reports using keywords, for example the name of a particular team. 
 
 ### _**Features left to implement**_
+
+* The potential to link to regional FA websites to submit reports direct from the application.
+* A message board for users to share their refereeing experiences.
+
 
 <div align="center">
 
@@ -288,7 +292,7 @@ I also used tools such as [W3C Markup Validation Service](https://validator.w3.o
 3. Fill in all the text fields on the form. <br>
 4. Click on the date field, does a date selector appear? Once the date is chosen does the correct date appear in the field? <br>
 5. Click the Match Type field, do 4 options appear? Once selected does the correct option appear in that field? <br>
-6. Once all fields are populated, click the submit report button. Dores a flashed message appear saying report added succesfully? <br>
+6. Once all fields are populated, click the submit report button. Does a flashed message appear saying report added succesfully? <br>
 7. Have you been redirected to the My reports page? Check to see if the report is added to the bottom of the reports section. <br>
 
 **All tests performed and no errors found.**
@@ -315,7 +319,7 @@ I also used tools such as [W3C Markup Validation Service](https://validator.w3.o
 4. Click on a report, does the report expand to show more information?<br>
 5. Does the edit report button appear at the bottom of the report? <br>
 6. Click the edit report button page, does the edit report page appear with the fields already filled? <br>
-7. Make changes to the report. And click edit report.<br>
+7. Make changes to the report, and click the edit report button.<br>
 8. Are you directed back to the My reports page? <br>
 9. Check the report to ensure the changes have been saved. <br>
 10. Click edit on another report. At the bottom of the edit report form click cancel. <br>
@@ -331,7 +335,7 @@ I also used tools such as [W3C Markup Validation Service](https://validator.w3.o
 4. Click cancel, are you directed back to the My Reports page? <br>
 5. Expand a report and click delete report again. <br>
 6. Click delete report in the pop up modal, are you directed back to the My Reports page? <br> 
-7. Has the report you deletd been removed from the My Reports page? <br>
+7. Has the report you deleted been removed from the My Reports page? <br>
 
 **All tests performed and no errors found.**
 
@@ -350,7 +354,7 @@ I also used tools such as [W3C Markup Validation Service](https://validator.w3.o
 
 1. Register a new account. <br>
 2. Click the Submit Report Link. <br>
-3. Complete a report on your favourite team / Team that you coach. <br>
+3. Complete a report on your favourite team / team that you coach. <br>
 4. Check the My Reports page to ensure the report is there. <br>
 5. Log out of your account. <br>
 6. Log back in and expand the report to check the details. <br>
@@ -392,11 +396,11 @@ on any browser.
 a separate 'helper' search function, which was then called by each app route function, passing in the name of the input field
 and the template name as an argument.
 
-2. I found that any user could view the All reports page, which should only be able to be seen by Admin. To resolve this
+2. I found that any user could view the All reports page, which should only be seen by Admin. To resolve this
 I created a function to check if the user is an admin, then called this function in an if statement in the 
 app route for All Reports, to ensure that only Admin can view this page.
 
-3. Any users were able to edit or delete othe users reports. This was resolved by creating a check in the edit report function
+3. Any users were able to edit or delete other users reports. This was resolved by creating a check in the edit report function
 to see if the logged in user was equal to the author of the report, or was Admin. If this is true, then the logged in user is able
 to edit and delete their own reports.
 
