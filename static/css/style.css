@@ -58,3 +58,10 @@ nav .brand-logo {
     border-radius: 1rem;
 }
 
+/* Social Links*/
+
+.social-links {
+    font-size: 1.8rem;
+    margin: 1rem;
+    color: #1a237e;
+}
