@@ -1,90 +1,85 @@
 {% extends "base.html" %}
 {% block content %}
-
 <section class="container">
-
-	<h5 class="center-align indigo-text darken-1">All Reports</h5>
-	<!-- Main Image-->
-	<div class="col s12">
-		<p>
-			<img src="{{ url_for('static', filename='images/referee-blue.jpg') }}" class="responsive-img referee-image" alt="">
+    <h5 class="center-align indigo-text darken-1">All Reports</h5>
+    <!-- Main Image-->
+    <div class="col s12">
+        <p>
+            <img src="{{ url_for('static', filename='images/referee-blue.jpg') }}" class="responsive-img referee-image" alt="">
         </p>
-	</div>
-
+    </div>
 </section>
 <!-- Accordion taken from https://materializecss.com/collapsible.html-->
 <ul class="collapsible popout">
-	{% for report in reports %}
-	<li>
-		<div class="collapsible-header white-text indigo darken-4">
-			<i class="fas fa-arrow-circle-down"></i>
-			<strong>{{ report.report_fixture }}<br>
-                    {{ report.report_date }}</strong>
-		</div>
-		<div class="collapsible-body light-blue lighten-5">
-			<strong>Match Type:</strong> {{ report.match_type }}<br>
-			<strong>Referee Name:</strong> {{ report.referee_name }}<br>
-			<strong>Score:</strong> {{ report.report_score }}<br>
-			<strong>Goalscorers:</strong> {{ report.report_scorers }}<br>
-			<strong>Cautions:</strong> {{ report.report_cautions }}<br>
-			<strong>Dismissals:</strong> {{ report.report_dismissals }}<br>
-			<p> <strong>Match Report:</strong> {{ report.report_report }}</p><br>
-			<!-- Edit and Delete Buttons-->
-			<div class="center-align">
-				<a href="{{ url_for('edit_report', report_id=report._id) }}"
-					class="btn-small center-align indigo darken-4">Edit Report</a>
-				<button data-target="{{ report._id }}" class="btn-small modal-trigger red darken-3">Delete Report</button>
-			</div>
-			    <p><em>Submitted by: {{ report.created_by }}</em></p>
-		    </div>
-		<!-- Modal to check if the report should be deleted-->
-		<div id="{{ report._id }}" class="modal">
-			<div class="modal-content light-blue lighten-5">
-				<div class="row">
-					<div class="col s12 center-align">
-						<h5 class=>Are you sure you want to delete this report?</h5>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col s6 center-align">
-						<a href="{{ url_for('delete_report', report_id=report._id) }}"
-							class="modal-close btn-small red darken-3">Delete </a>
-					</div>
-					<div class="col s6 center-align">
-						<a href="{{ url_for('admin_reports') }}" class="btn-small indigo darken-4 ">Cancel</a>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</li>
-	{% endfor %}
+    {% for report in reports %}
+    <li>
+        <div class="collapsible-header white-text indigo darken-4">
+            <i class="fas fa-arrow-circle-down"></i>
+            <strong>{{ report.report_fixture }}<br>
+            {{ report.report_date }}</strong>
+        </div>
+        <div class="collapsible-body light-blue lighten-5">
+            <strong>Match Type:</strong> {{ report.match_type }}<br>
+            <strong>Referee Name:</strong> {{ report.referee_name }}<br>
+            <strong>Score:</strong> {{ report.report_score }}<br>
+            <strong>Goalscorers:</strong> {{ report.report_scorers }}<br>
+            <strong>Cautions:</strong> {{ report.report_cautions }}<br>
+            <strong>Dismissals:</strong> {{ report.report_dismissals }}<br>
+            <p> <strong>Match Report:</strong> {{ report.report_report }}</p>
+            <br>
+            <!-- Edit and Delete Buttons-->
+            <div class="center-align">
+                <a href="{{ url_for('edit_report', report_id=report._id) }}"
+                    class="btn-small center-align indigo darken-4">Edit Report</a>
+                <button data-target="{{ report._id }}" class="btn-small modal-trigger red darken-3">Delete Report</button>
+            </div>
+            <p><em>Report Submitted by: {{ report.created_by }}</em></p>
+        </div>
+        <!-- Modal to check if the report should be deleted-->
+        <div id="{{ report._id }}" class="modal">
+            <div class="modal-content light-blue lighten-5">
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <h5 class=>Are you sure you want to delete this report?</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6 center-align">
+                        <a href="{{ url_for('delete_report', report_id=report._id) }}"
+                            class="modal-close btn-small red darken-3">Delete </a>
+                    </div>
+                    <div class="col s6 center-align">
+                        <a href="{{ url_for('admin_reports') }}" class="btn-small indigo darken-4 ">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    {% endfor %}
 </ul>
-
 <!-- Search section to search reports using key words  -->
 <div class="row card-panel light-blue lighten-5 all-card-panels">
-	<form action="{{ url_for('admin_search') }}" method="post" class="col s12">
-		<div class="row valign-wrapper center-align">
-			<div class="input-field col s12">
-				<input type="text" name="admin_search" id="admin_search" class="validate " minlength="3" required>
-				<label for="admin_search">
+    <form action="{{ url_for('admin_search') }}" method="post" class="col s12">
+        <div class="row valign-wrapper center-align">
+            <div class="input-field col s12">
+                <input type="text" name="admin_search" id="admin_search" class="validate " minlength="3" required>
+                <label for="admin_search">
                 <i class="fas fa-search left"></i>Search Reports
                 </label>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col s6 m6 center-align">
-				<button type="submit" class="btn indigo darken-4 white-text">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 m6 center-align">
+                <button type="submit" class="btn indigo darken-4 white-text">
                 <i class="fas fa-search left"></i>Search
                 </button>
-			</div>
-			<div class="col s6 m6 center-align">
-				<a href="{{ url_for('admin_reports') }} " class="red darken-3 btn">
-					<i class="fas fa-redo-alt left"></i>Reset
-				</a>
-			</div>
-		</div>
-	</form>
+            </div>
+            <div class="col s6 m6 center-align">
+                <a href="{{ url_for('admin_reports') }} " class="red darken-3 btn">
+                <i class="fas fa-redo-alt left"></i>Reset
+                </a>
+            </div>
+        </div>
+    </form>
 </div>
-
 {% endblock %}

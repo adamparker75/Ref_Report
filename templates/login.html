@@ -1,57 +1,50 @@
 {% extends "base.html" %}
 {% block content %}
-
 <section class="container">
-
-	<h5 class="center-align indigo-text darken-1">Log In</h5>
-	<!-- Main image-->
-	<div class="col s12 l6">
-		<p>
-			<img src="{{ url_for('static', filename='images/referee-point.jpg') }}" class="responsive-img referee-image" alt="">
+    <h5 class="center-align indigo-text darken-1">Log In</h5>
+    <!-- Main image-->
+    <div class="col s12 l6">
+        <p>
+            <img src="{{ url_for('static', filename='images/referee-point.jpg') }}" class="responsive-img referee-image" alt="">
         </p>
-	</div>
-
+    </div>
 </section>
-
 <!-- Login form-->
 <div class="card-panel light-blue lighten-5 all-card-panels">
-	<form method="POST" action="{{ url_for('login') }}">
-		<div class="row">
-			<div class="input-field col s12">
-				<i class="fas fa-user-cog prefix indigo-text darken-1"></i>
-				<input id="username" name="username" type="text" minlength="5"
+    <form method="POST" action="{{ url_for('login') }}">
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-user-cog prefix indigo-text darken-1"></i>
+                <input id="username" name="username" type="text" minlength="5"
                     maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$"  class="validate" required>
-				<label for="username">Username</label>
-			</div>
-		</div>
-		<div class="row">
-			<div class="input-field col s12">
-				<i class="fas fa-user-lock prefix indigo-text darken-1"></i>
-				<input id="password" name="password" type="password" minlength="5"
+                <label for="username">Username</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-user-lock prefix indigo-text darken-1"></i>
+                <input id="password" name="password" type="password" minlength="5"
                     maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$"  class="validate" required>
-				<label for="password">Password</label>
-			</div>
-		</div>
-		<!-- Login Button -->
-		<div class="row">
-			<div class="col s12 center-align">
-				<button type="submit" class="btn-large indigo darken-4">
-                    Log In <i class="fas fa-sign-in-alt"></i>
+                <label for="password">Password</label>
+            </div>
+        </div>
+        <!-- Login Button -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button type="submit" class="btn-large indigo darken-4">
+                Log In <i class="fas fa-sign-in-alt"></i>
                 </button>
-			</div>
-		</div>
-	</form>
+            </div>
+        </div>
+    </form>
 </div>
-
 <!-- Link back to register page-->
 <div class="row">
-	<div class="col s12">
-		<p class="center-align">
-			New to Ref Report?
-			<a href="{{ url_for('register') }}" class="indigo-text text-darken-1">Register Account</a>
-		</p>
-	</div>
+    <div class="col s12">
+        <p class="center-align">
+            New to Ref Report?
+            <a href="{{ url_for('register') }}" class="indigo-text text-darken-1">Register Account</a>
+        </p>
+    </div>
 </div>
-
-
 {% endblock %}

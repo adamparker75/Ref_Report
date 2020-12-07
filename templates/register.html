@@ -1,63 +1,57 @@
 {% extends "base.html" %}
 {% block content %}
-
 <section class="container">
-
-<h5 class="center-align indigo-text text-darken-4">Register</h5>
+    <h5 class="center-align indigo-text text-darken-4">Register</h5>
     <!-- Main Image-->
-	<div class="col s12">
+    <div class="col s12">
         <p>
-		<img src="{{ url_for('static', filename='images/referee-fifa.jpg') }}" class="responsive-img referee-image" alt="">
+            <img src="{{ url_for('static', filename='images/referee-fifa.jpg') }}" class="responsive-img referee-image" alt="">
         </p>
     </div>
-
 </section>
-
 <!-- Registration form -->
-
-	<div class="card-panel light-blue lighten-5 all-card-panels">
-		<form method="POST" action="{{ url_for('register') }}">
-        	<div class="row">
-				<div class="input-field col s12">
-					<i class="fas fa-user-plus prefix indigo-text text-darken-1"></i>
-					<input id="firstname" name="firstname" type="text" class="validate" required>
-					<label for="firstname">First Name</label>
-				</div>
-			</div>
-            <div class="row">
-				<div class="input-field col s12">
-					<i class="fas fa-user-plus prefix indigo-text text-darken-1"></i>
-					<input id="lastname" name="lastname" type="text" class="validate" required>
-					<label for="lastname">Last Name</label>
-				</div>
-			</div>
-			<div class="row">
-				<div class="input-field col s12">
-					<i class="fas fa-user-plus prefix indigo-text text-darken-1"></i>
-					<input id="username" name="username" type="text" minlength="5"
+<div class="card-panel light-blue lighten-5 all-card-panels">
+    <form method="POST" action="{{ url_for('register') }}">
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-user-plus prefix indigo-text text-darken-1"></i>
+                <input id="firstname" name="firstname" type="text" class="validate" required>
+                <label for="firstname">First Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-user-plus prefix indigo-text text-darken-1"></i>
+                <input id="lastname" name="lastname" type="text" class="validate" required>
+                <label for="lastname">Last Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-user-plus prefix indigo-text text-darken-1"></i>
+                <input id="username" name="username" type="text" minlength="5"
                     maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$"  class="validate" required>
-					<label for="username">Username</label>
-				</div>
-			</div>
-            <div class="row">
-				<div class="input-field col s12">
-					<i class="fas fa-user-lock prefix indigo-text text-darken-1"></i>
-					<input id="password" name="password" type="password" minlength="5"
+                <label for="username">Username</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-user-lock prefix indigo-text text-darken-1"></i>
+                <input id="password" name="password" type="password" minlength="5"
                     maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$"  class="validate" required>
-					<label for="password">Password</label>
-				</div>
-			</div>
-            <!-- Register Button -->
-            <div class="row">
+                <label for="password">Password</label>
+            </div>
+        </div>
+        <!-- Register Button -->
+        <div class="row">
             <div class="col s12 center-align">
                 <button type="submit" class="btn-large indigo darken-4">
-                    Register <i class="fas fa-sign-in-alt"></i>
+                Register <i class="fas fa-sign-in-alt"></i>
                 </button>
             </div>
-            </div>
-		</form>
-	</div>
-
+        </div>
+    </form>
+</div>
 <!-- Link back to log in page-->
 <div class="row">
     <div class="col s12">
@@ -67,6 +61,4 @@
         </p>
     </div>
 </div>
-
-
 {% endblock %}
